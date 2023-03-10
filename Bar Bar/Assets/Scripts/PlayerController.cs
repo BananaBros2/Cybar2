@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         view = GetComponent<PhotonView>();
+        if (!view.IsMine)
+        {
+            gameObject.tag = "NLPlayer";
+        }
 
     }
 

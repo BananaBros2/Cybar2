@@ -40,6 +40,13 @@ MonoBehaviour:
   - Fire
   - RespawnSpaceship
   - ChatMessage
+  - RPCThing
+  - RPC_SetValues
+  - RPC_Drop
+  - RPC_Holding
+  - RPC_PickUp
+  - RPC_Throw
+  - RPC_Start
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

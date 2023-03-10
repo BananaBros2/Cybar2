@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1168467921352375836}
   - component: {fileID: 5733362255295282572}
   - component: {fileID: 8794353907602946660}
+  - component: {fileID: 8224085219622040075}
   m_Layer: 7
   m_Name: Beer
   m_TagString: Untagged
@@ -225,6 +226,18 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &8224085219622040075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431506533024254292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a0c2aac92fccb46974ed1b67118d00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3653151207350508964
 GameObject:
   m_ObjectHideFlags: 0
