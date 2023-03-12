@@ -225,6 +225,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bec203df16c34e46a3a24e9864f74ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupDistance: 0
+  toFollow: {fileID: 0}
+  Holding: 0
+  checkedItems: []
+  worldItems: []
+  readyToThrow: 0
+  forceMulti: 0
 --- !u!54 &6402839683396447402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -292,7 +299,7 @@ MonoBehaviour:
     SynchronizeEnabled: 1
     InterpolateOption: 2
     InterpolateRotateTowardsSpeed: 180
-    InterpolateLerpSpeed: 5
+    InterpolateLerpSpeed: 10
   m_ScaleModel:
     SynchronizeEnabled: 0
     InterpolateOption: 0

@@ -17,7 +17,7 @@ public class TableTest : MonoBehaviour
         //print(other.gameObject.GetComponent<Typing>().drinkType);
         if(other.gameObject.layer.ToString() == "Items")
         {
-            if (other.gameObject.GetComponent<Typing>().drinkType == desiredDrink)
+            if (other.gameObject.GetComponent<ItemData>().drinkType == desiredDrink)
             {
                 Destroy(other.gameObject);
                 print("yay");

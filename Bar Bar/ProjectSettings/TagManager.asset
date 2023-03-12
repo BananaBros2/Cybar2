@@ -8,7 +8,7 @@ TagManager:
   - Item
   - Table
   - Keg
-  - NLPlayer
+  - NewPlayer
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,6 @@ public class TESTSCRIPTREMORESOON : MonoBehaviour
         GetComponent<BoxCollider>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
         //GameObject.FindGameObjectWithTag("Player").GetComponent<Holding>().ObjectsHolding += 1;
-        GetComponent<GrabScript>().forceMulti = 0;
 
     }
 

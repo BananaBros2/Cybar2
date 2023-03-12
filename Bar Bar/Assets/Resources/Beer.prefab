@@ -13,15 +13,13 @@ GameObject:
   - component: {fileID: 3431506533024254296}
   - component: {fileID: 3431506533024254297}
   - component: {fileID: 3431506533024254294}
-  - component: {fileID: 3431506533024254295}
   - component: {fileID: 926836258890916222}
   - component: {fileID: 1168467921352375836}
   - component: {fileID: 5733362255295282572}
   - component: {fileID: 8794353907602946660}
-  - component: {fileID: 8224085219622040075}
   m_Layer: 7
   m_Name: Beer
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,24 +119,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3431506533024254295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3431506533024254292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07031a8477fd1b942ba65acbf2363998, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupDistance: 3
-  forceMulti: 0
-  readyToThrow: 0
-  itemIsPicked: 0
-  throwForce: 1500
-  toFollow: {fileID: 0}
 --- !u!114 &926836258890916222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,9 +148,9 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
+  Synchronization: 2
+  OwnershipTransfer: 2
+  observableSearch: 0
   ObservedComponents:
   - {fileID: 5733362255295282572}
   - {fileID: 8794353907602946660}
@@ -226,18 +206,6 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
---- !u!114 &8224085219622040075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3431506533024254292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40a0c2aac92fccb46974ed1b67118d00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3653151207350508964
 GameObject:
   m_ObjectHideFlags: 0

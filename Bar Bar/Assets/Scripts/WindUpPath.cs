@@ -6,7 +6,6 @@ public class WindUpPath : MonoBehaviour
 {
     public Transform goal;
     public GameObject turnKey;
-    public GrabScript grabScript;
     NavMeshAgent agent;
 
     // Start is called before the first frame update

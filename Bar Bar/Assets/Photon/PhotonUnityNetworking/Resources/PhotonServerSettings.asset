@@ -47,6 +47,10 @@ MonoBehaviour:
   - RPC_PickUp
   - RPC_Throw
   - RPC_Start
+  - RPC_ColorChange
+  - RPC_PlayerName
+  - SetLobbyPlayersData
+  - RPC_ValueChanges
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

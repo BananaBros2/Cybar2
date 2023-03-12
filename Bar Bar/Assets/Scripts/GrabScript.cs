@@ -81,6 +81,8 @@ public class GrabScript : MonoBehaviourPunCallbacks
                 player.GetComponent<Holding>().ObjectsHolding += 1;
                 itemIsPicked = true;
                 forceMulti = 0;
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
+            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
             }
         }
