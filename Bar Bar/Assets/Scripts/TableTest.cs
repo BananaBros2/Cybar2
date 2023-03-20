@@ -6,10 +6,6 @@ public class TableTest : MonoBehaviour
 {
 
     public string desiredDrink;
-    void Update()
-    {
-
-    }
 
     private void OnTriggerEnter(Collider other)
     {

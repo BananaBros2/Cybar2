@@ -15,7 +15,6 @@ public class ServerConnectionScript : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-
         PhotonNetwork.ConnectUsingSettings();
         LoadLobbyScene();
     }

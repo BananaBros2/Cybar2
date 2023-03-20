@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7383057366743370869}
   - component: {fileID: 6721878553212827740}
   - component: {fileID: 5922727412056509796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 3445298392172262876}
   - component: {fileID: 3445298392172262875}
   - component: {fileID: 3445298392172262874}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 3445298392825800394}
   - component: {fileID: 3445298392825800393}
   - component: {fileID: 8858680807270275725}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Person
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,15 +249,15 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1
   m_Speed: 7
-  m_Acceleration: 8
+  m_Acceleration: 16
   avoidancePriority: 60
   m_AngularSpeed: 150
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1.2
-  m_BaseOffset: 0.5
+  m_Height: 1.4
+  m_BaseOffset: 0.8
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 3
 --- !u!114 &9209856367539349914
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2452e30861fbf741987ac2d85bd8127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goal: {fileID: 0}
 --- !u!65 &3445298392825800438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -296,7 +297,7 @@ Rigidbody:
   m_Mass: 3
   m_Drag: 2
   m_AngularDrag: 0.1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -386,7 +387,7 @@ GameObject:
   - component: {fileID: 8240112218708931082}
   - component: {fileID: 483063452730462465}
   - component: {fileID: 4293251383839069241}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +484,7 @@ GameObject:
   - component: {fileID: 3923675971704286785}
   - component: {fileID: 1509270483093775535}
   - component: {fileID: 3280090906710774746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -579,7 +580,7 @@ GameObject:
   - component: {fileID: 7630975301485511418}
   - component: {fileID: 4303245206664042454}
   - component: {fileID: 1799775934053601882}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -663,7 +664,7 @@ GameObject:
   - component: {fileID: 2960577228303771361}
   - component: {fileID: 8019794704240816847}
   - component: {fileID: 7814006234273136900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

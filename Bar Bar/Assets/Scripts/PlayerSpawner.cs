@@ -16,6 +16,7 @@ public class PlayerSpawner : MonoBehaviour
     public float minZ;
     public float maxZ;
 
+
     void Start()
     {
         Vector3 randomPosition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ));

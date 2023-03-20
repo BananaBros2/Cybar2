@@ -17,6 +17,7 @@ public class PersonScript : MonoBehaviour
         agent.destination = goal.position;
     }
 
+
     private void Update()
     {
         //if (grabScript.itemIsPicked == true) { agent.isStopped = true; }
@@ -28,7 +29,7 @@ public class PersonScript : MonoBehaviour
         if (collidedObject.transform == goal)
         {
             
-            goal = GameObject.Find("Seats").transform.GetChild(Random.Range(0,25));
+            goal = GameObject.Find("Seats").transform.GetChild(Random.Range(0,24));
             agent.destination = goal.position;
         }
 

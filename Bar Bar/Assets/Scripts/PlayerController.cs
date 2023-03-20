@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public List<Transform> checkedItems;
     public Transform[] worldItems;
 
-
     public bool readyToThrow;
     public float forceMulti;
 
@@ -55,7 +54,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
         {
             if (airbourne)
             {
-                transform.position += Physics.gravity * Time.deltaTime;
+                transform.GetComponent<Rigidbody>().AddForce(Physics.gravity * Time.deltaTime * 10);
+                //transform.position += Physics.gravity * Time.deltaTime;
             }
 
             float xTranslation = Input.GetAxis("Horizontal") * Time.deltaTime;
