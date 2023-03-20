@@ -187,7 +187,6 @@ GameObject:
   - component: {fileID: 6402839683396447402}
   - component: {fileID: 7849102743476138058}
   - component: {fileID: 2670820781426342615}
-  - component: {fileID: 4198844577953210174}
   - component: {fileID: 1766668403376109435}
   m_Layer: 0
   m_Name: Player
@@ -232,6 +231,7 @@ MonoBehaviour:
   worldItems: []
   readyToThrow: 0
   forceMulti: 0
+  Beer: {fileID: 3431506533024254292, guid: 1671ca90b8c3eb543affafc4c32a6516, type: 3}
 --- !u!54 &6402839683396447402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &7849102743476138058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,19 +305,6 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
---- !u!114 &4198844577953210174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6402839683396447399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2ccb470d2862b744b4e53d6d27871e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectsHolding: 0
 --- !u!114 &1766668403376109435
 MonoBehaviour:
   m_ObjectHideFlags: 0

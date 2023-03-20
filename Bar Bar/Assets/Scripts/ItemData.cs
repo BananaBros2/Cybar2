@@ -8,4 +8,5 @@ public class ItemData : MonoBehaviour
     public string snackType = null;
 
     public bool beingHeld = false;
+    public int Contents = 0;
 }

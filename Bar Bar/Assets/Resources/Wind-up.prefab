@@ -142,7 +142,6 @@ GameObject:
   - component: {fileID: 3445298392825800435}
   - component: {fileID: 3445298392825800438}
   - component: {fileID: 3445298392825800439}
-  - component: {fileID: 3445298392825800392}
   - component: {fileID: 3445298392825800394}
   - component: {fileID: 3445298392825800393}
   - component: {fileID: 8858680807270275725}
@@ -206,7 +205,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goal: {fileID: 0}
   turnKey: {fileID: 4830616048357301765}
-  grabScript: {fileID: 3445298392825800392}
 --- !u!65 &3445298392825800438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -236,24 +234,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &3445298392825800392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3445298392825800434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07031a8477fd1b942ba65acbf2363998, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupDistance: 2
-  forceMulti: 0
-  readyToThrow: 0
-  itemIsPicked: 0
-  throwForce: 1000
-  toFollow: {fileID: 0}
 --- !u!114 &3445298392825800394
 MonoBehaviour:
   m_ObjectHideFlags: 0

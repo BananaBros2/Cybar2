@@ -9,6 +9,7 @@ TagManager:
   - Table
   - Keg
   - NewPlayer
+  - Item2
   layers:
   - Default
   - TransparentFX

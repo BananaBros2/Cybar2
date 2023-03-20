@@ -133,6 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drinkType: Beer
   snackType: 
+  beingHeld: 0
+  Contents: 0
 --- !u!114 &1168467921352375836
 MonoBehaviour:
   m_ObjectHideFlags: 0

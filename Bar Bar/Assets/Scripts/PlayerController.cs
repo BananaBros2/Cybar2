@@ -27,24 +27,25 @@ public class PlayerController : MonoBehaviourPunCallbacks
     //  Photon   ------------------------
     PhotonView view;
 
+    public GameObject Beer;
 
     private void Start()
     {
         view = GetComponent<PhotonView>();
-        if (!view.IsMine)
-        {
-            //gameObject.tag = "NLPlayer";
-        }
+        view.Owner.NickName = "Player " + PhotonNetwork.PlayerList.Length;
+
+        PhotonNetwork.UseRpcMonoBehaviourCache = false;
 
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Item"))
         {
             checkedItems.Add(go.GetComponent<Transform>());
             worldItems = checkedItems.ToArray();
         }
-
-        var photonView = GetComponent<PhotonView>();
-        photonView.Owner.NickName = "Player " + PhotonNetwork.PlayerList.Length;
-
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Item2"))
+        {
+            checkedItems.Add(go.GetComponent<Transform>());
+            worldItems = checkedItems.ToArray();
+        }
 
     }
 
@@ -68,9 +69,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
             var normalizedVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
             view.transform.Translate(normalizedVector.x * Time.deltaTime * 10, 0, normalizedVector.y * Time.deltaTime * 10);
 
-
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
 
     }
@@ -90,7 +88,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
             {
                 Vector3 directionToTarget = potentialTarget.position - currentPosition;
                 float dSqrToTarget = directionToTarget.sqrMagnitude;
-                if (dSqrToTarget < closestDistanceSqr && potentialTarget.GetComponent<ItemData>().beingHeld == false)
+                if (potentialTarget.tag == "Item2")
+                    dSqrToTarget += 0.5f;
+                if (dSqrToTarget < closestDistanceSqr && (potentialTarget.GetComponent<ItemData>().beingHeld == false 
+                    || potentialTarget.GetComponent<ItemData>().Contents > 0))
                 {
                     closestDistanceSqr = dSqrToTarget;
                     bestTarget = potentialTarget;
@@ -99,15 +100,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
             return bestTarget;
         }
-
-
-
-
-
-
-
-
-
 
         if (Input.GetKey(KeyCode.E) && Holding && readyToThrow)
         {
@@ -122,10 +114,16 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
             if (pickupDistance < 2.5f && Holding == false)
             {
+                if (closest.tag == "Item2")
+                {
+                    closest = PhotonNetwork.Instantiate(Beer.name, transform.position, Quaternion.identity);
+                    checkedItems.Add(closest.transform);
+                    worldItems = checkedItems.ToArray();
+                }
+               
+
                 toFollow = transform.Find("Body");
 
-                view.RPC(nameof(RPC_Holding), RpcTarget.All);
-                //PV.RPC(nameof(RPC_Holding), RpcTarget.All);
                 offset = toFollow.position - transform.position;
 
                 closest.GetComponent<Rigidbody>().useGravity = false;
@@ -214,26 +212,15 @@ public class PlayerController : MonoBehaviourPunCallbacks
         ObjectSync.transform.position = newPosition;
         ObjectSync.transform.rotation = newRotation;
         ObjectSync.transform.GetComponent<Rigidbody>().useGravity = !phantom;
-        ObjectSync.transform.GetComponent<Rigidbody>().useGravity = !phantom;
-        if(phantom)
+        ObjectSync.transform.GetComponent<Rigidbody>().isKinematic = phantom;
+        ObjectSync.transform.GetComponent<ItemData>().beingHeld = Holding;
+        if (phantom)
         {
             ObjectSync.GetComponent<Rigidbody>().velocity = Vector3.zero;
             ObjectSync.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
         if (Thrown)
             ObjectSync.transform.GetComponent<Rigidbody>().AddForce(transform.Find("Body").forward * 1000 * 2);
-        ObjectSync.transform.GetComponent<ItemData>().beingHeld = Holding;
-    }
-
-
-
-
-    [PunRPC]
-    void RPC_Holding()
-    {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.GetChild(0).GetComponent<Renderer>().material.color = new Color(0, 1, 0);
-
     }
 
 }
