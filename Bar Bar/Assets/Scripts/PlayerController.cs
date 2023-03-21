@@ -31,9 +31,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     private void Start()
     {
         view = GetComponent<PhotonView>();
-        view.Owner.NickName = "Player " + PhotonNetwork.PlayerList.Length;
-
-        PhotonNetwork.UseRpcMonoBehaviourCache = false;
+        //view.Owner.NickName = "Player " + PhotonNetwork.PlayerList.Length;
 
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Item"))
         {
