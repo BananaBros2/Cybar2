@@ -22,6 +22,7 @@ public class WindUpPath : MonoBehaviour
 
     }
 
+
     private void OnCollisionEnter(Collision collidedObject)
     {
         if (collidedObject.transform == goal)

@@ -5,11 +5,11 @@ using UnityEngine;
 public class TableTest : MonoBehaviour
 {
 
+
     //public string desiredDrink;
 
     //private void OnTriggerEnter(Collider other)
     //{
-
     //    //print(other.gameObject.transform.tag);
     //    //print(other.gameObject.GetComponent<Typing>().drinkType);
     //    if(other.gameObject.layer.ToString() == "Items")
@@ -20,6 +20,5 @@ public class TableTest : MonoBehaviour
     //            print("yay");
     //        }
     //    }
-        
     //}
 }

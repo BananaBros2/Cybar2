@@ -22,5 +22,4 @@ public class PlayerSpawner : MonoBehaviour
         player = PhotonNetwork.Instantiate("Player", randomPosition, Quaternion.identity);
         //player.gameObject.name = ("Player " + PhotonNetwork.LocalPlayer.ActorNumber);
     }
-
 }

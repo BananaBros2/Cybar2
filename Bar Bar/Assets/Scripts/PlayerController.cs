@@ -6,7 +6,6 @@ using Photon.Pun;
 
 public class PlayerController : MonoBehaviourPunCallbacks
 {
-
     // Movement -------------------------
     bool airbourne = true;
 
@@ -125,8 +124,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
             {
                 if (closest.tag == "Container")
                 {
-                    if (closest.GetComponent<ContainerData>().contents == "Glass")
+                    if (closest.GetComponent<ContainerData>().contents == "Glass" && closest.GetComponent<ContainerData>().count > 0)
                     {
+                        closest.transform.GetChild(closest.GetComponent<ContainerData>().count).gameObject.SetActive(false);
+                        closest.GetComponent<ContainerData>().count -= 1;
                         closest = PhotonNetwork.Instantiate(Beer.name, transform.position, Quaternion.identity);
                         checkedItems.Add(closest.transform);
                         worldItems = checkedItems.ToArray();
@@ -177,22 +178,27 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
             if (Vector3.Distance(throwOrMix.transform.position, transform.position) < 2.5f)
             {
-                if (throwOrMix.tag == "Container")
+                if (throwOrMix.tag == "Container" && throwOrMix.GetComponent<ContainerData>().count > 0)
                 {
                     string content = throwOrMix.GetComponent<ContainerData>().contents;
                     if (content == "Glass") { return; }
 
+                    
+
                     if (closest.transform.GetComponent<ItemData>().drinkType1 == "Empty")
                     {
                         closest.transform.GetComponent<ItemData>().drinkType1 = content;
+                        throwOrMix.GetComponent<ContainerData>().count -= 1;
                     }
                     else if (closest.transform.GetComponent<ItemData>().drinkType2 == "Empty")
                     {
                         closest.transform.GetComponent<ItemData>().drinkType2 = content;
+                        throwOrMix.GetComponent<ContainerData>().count -= 1;
                     }
                     else if (closest.transform.GetComponent<ItemData>().drinkType3 == "Empty")
                     {
                         closest.transform.GetComponent<ItemData>().drinkType3 = content;
+                        throwOrMix.GetComponent<ContainerData>().count -= 1;
                     }
                     else { Debug.Log("Full"); }
                     return;

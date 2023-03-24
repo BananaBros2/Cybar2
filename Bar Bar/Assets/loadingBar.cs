@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class loadingBar : MonoBehaviour
 {
-    public float fillAmmount = 0f;
+    public float fillAmount = 0f;
 
     private Camera cam;
     private Image progressBar;
@@ -21,7 +21,7 @@ public class loadingBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        progressBar.fillAmount = fillAmmount;
+        progressBar.fillAmount = fillAmount;
 
         transform.LookAt(new Vector3(transform.position.x, cam.transform.position.y, cam.transform.position.z));
         

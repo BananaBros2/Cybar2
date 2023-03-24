@@ -8,6 +8,7 @@ using Photon.Pun;
 
 public class RoomCreatorScript : MonoBehaviourPunCallbacks
 {
+
     public TMP_InputField createInput;
     public TMP_InputField JoinInput;
 
