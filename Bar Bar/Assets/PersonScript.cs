@@ -8,29 +8,37 @@ public class PersonScript : MonoBehaviour
     public Transform goal;
     //public GameObject turnKey;
     NavMeshAgent agent;
+    public bool seated = false;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        //goal = transform.Find("Seats").GetComponent<Seat_Library>().worldItems[Random.Range(0, transform.Find("Seats").GetComponent<Seat_Library>().worldItems.Length)];
-        agent.destination = goal.position;
     }
 
 
     private void Update()
     {
-        //if (grabScript.itemIsPicked == true) { agent.isStopped = true; }
-        //turnKey.transform.rotation *= Quaternion.AngleAxis(70 * agent.speed * Time.deltaTime, Vector3.left);
+        if(goal == null)
+        {
+            goal = GameObject.Find("Seats").transform.GetChild(Random.Range(0, 1));
+            agent.destination = goal.position;
+        }
+        if(seated)
+        {
+            
+        }
     }
 
     private void OnCollisionEnter(Collision collidedObject)
     {
         if (collidedObject.transform == goal)
         {
-            
-            goal = GameObject.Find("Seats").transform.GetChild(Random.Range(0,24));
-            agent.destination = goal.position;
+            seated = true;
+            agent.enabled = false;
+            GetComponent<Rigidbody>().isKinematic = true;
+            transform.position = new Vector3(goal.position.x, goal.position.y + 1.5f, goal.position.z);
+            transform.rotation = Quaternion.Euler(0, goal.rotation.y, goal.rotation.z);
         }
 
     }

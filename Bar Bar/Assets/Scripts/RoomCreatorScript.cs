@@ -11,7 +11,6 @@ public class RoomCreatorScript : MonoBehaviourPunCallbacks
     public TMP_InputField createInput;
     public TMP_InputField JoinInput;
 
-
     private void Start()
     {
         PhotonNetwork.JoinLobby();

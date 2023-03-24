@@ -42,7 +42,6 @@ public class WindUpPath : MonoBehaviour
         //        goal = GameObject.Find("Goal").transform;
         //        agent.destination = goal.position;
         //    }
-
         //}
 
     }

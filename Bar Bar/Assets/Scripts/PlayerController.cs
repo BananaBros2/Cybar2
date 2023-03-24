@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     private Vector3 offset;
     public bool Holding = false;
     GameObject closest;
-
+    GameObject throwOrMix;
     public List<Transform> checkedItems;
     public Transform[] worldItems;
 
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             checkedItems.Add(go.GetComponent<Transform>());
             worldItems = checkedItems.ToArray();
         }
-        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Item2"))
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Container"))
         {
             checkedItems.Add(go.GetComponent<Transform>());
             worldItems = checkedItems.ToArray();
@@ -84,16 +84,27 @@ public class PlayerController : MonoBehaviourPunCallbacks
             Vector3 currentPosition = transform.position;
             foreach (Transform potentialTarget in objects)
             {
+                print(potentialTarget);
                 Vector3 directionToTarget = potentialTarget.position - currentPosition;
                 float dSqrToTarget = directionToTarget.sqrMagnitude;
-                if (potentialTarget.tag == "Item2")
-                    dSqrToTarget += 0.5f;
-                if (dSqrToTarget < closestDistanceSqr && (potentialTarget.GetComponent<ItemData>().beingHeld == false 
-                    || potentialTarget.GetComponent<ItemData>().Contents > 0))
+
+                if (potentialTarget.tag == "Item")
                 {
-                    closestDistanceSqr = dSqrToTarget;
-                    bestTarget = potentialTarget;
+                    if (dSqrToTarget < closestDistanceSqr && potentialTarget.GetComponent<ItemData>().beingHeld == false)
+                    {
+                        closestDistanceSqr = dSqrToTarget;
+                        bestTarget = potentialTarget;
+                    }
                 }
+                if (potentialTarget.tag == "Container")
+                {
+                    if (dSqrToTarget < closestDistanceSqr && potentialTarget.GetComponent<ContainerData>().count > 0)
+                    {
+                        closestDistanceSqr = dSqrToTarget;
+                        bestTarget = potentialTarget;
+                    }
+                }
+
             }
 
             return bestTarget;
@@ -112,29 +123,36 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
             if (pickupDistance < 2.5f && Holding == false)
             {
-                if (closest.tag == "Item2")
+                if (closest.tag == "Container")
                 {
-                    closest = PhotonNetwork.Instantiate(Beer.name, transform.position, Quaternion.identity);
-                    checkedItems.Add(closest.transform);
-                    worldItems = checkedItems.ToArray();
+                    if (closest.GetComponent<ContainerData>().contents == "Glass")
+                    {
+                        closest = PhotonNetwork.Instantiate(Beer.name, transform.position, Quaternion.identity);
+                        checkedItems.Add(closest.transform);
+                        worldItems = checkedItems.ToArray();
+                    }
+                    
                 }
                
+                if (closest.tag == "Item")
+                {
+                    toFollow = transform.Find("Body");
 
-                toFollow = transform.Find("Body");
+                    offset = toFollow.position - transform.position;
 
-                offset = toFollow.position - transform.position;
+                    closest.GetComponent<Rigidbody>().useGravity = false;
+                    closest.GetComponent<BoxCollider>().enabled = false;
+                    closest.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                    GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                    Holding = true;
+                    forceMulti = 0;
 
-                closest.GetComponent<Rigidbody>().useGravity = false;
-                closest.GetComponent<BoxCollider>().enabled = false;
-                closest.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-                Holding = true;
-                forceMulti = 0;
-
-                int ObjectRPCID = closest.GetComponent<PhotonView>().ViewID;
-                Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
-                Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
-                view.RPC("RPC_ValueChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, true, false, true);
+                    int ObjectRPCID = closest.GetComponent<PhotonView>().ViewID;
+                    Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
+                    Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
+                    view.RPC("RPC_ValueChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, true, false, true);
+                }
+                
             }
 
         }
@@ -155,6 +173,32 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         if (Input.GetKeyUp(KeyCode.E) && Holding == true)
         {
+            throwOrMix = GetClosestObject(worldItems).transform.gameObject;
+
+            if (Vector3.Distance(throwOrMix.transform.position, transform.position) < 2.5f)
+            {
+                if (throwOrMix.tag == "Container")
+                {
+                    string content = throwOrMix.GetComponent<ContainerData>().contents;
+                    if (content == "Glass") { return; }
+
+                    if (closest.transform.GetComponent<ItemData>().drinkType1 == "Empty")
+                    {
+                        closest.transform.GetComponent<ItemData>().drinkType1 = content;
+                    }
+                    else if (closest.transform.GetComponent<ItemData>().drinkType2 == "Empty")
+                    {
+                        closest.transform.GetComponent<ItemData>().drinkType2 = content;
+                    }
+                    else if (closest.transform.GetComponent<ItemData>().drinkType3 == "Empty")
+                    {
+                        closest.transform.GetComponent<ItemData>().drinkType3 = content;
+                    }
+                    else { Debug.Log("Full"); }
+                    return;
+                }
+            }
+
             readyToThrow = true;
             if (forceMulti > 10)
             {
@@ -192,7 +236,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     }
 
-
     private void OnCollisionEnter()
     {
         airbourne = false;
@@ -201,7 +244,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
     {
         airbourne = true;
     }
-
 
     [PunRPC]
     void RPC_ValueChanges(int objectRPC, Vector3 newPosition, Quaternion newRotation, bool phantom, bool Thrown, bool Holding)

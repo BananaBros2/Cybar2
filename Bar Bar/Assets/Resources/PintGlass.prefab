@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 3431506533024254299}
   - component: {fileID: 3431506533024254296}
   - component: {fileID: 3431506533024254297}
+  - component: {fileID: 6880313313626317918}
   - component: {fileID: 3431506533024254294}
-  - component: {fileID: 926836258890916222}
   - component: {fileID: 1168467921352375836}
   - component: {fileID: 5733362255295282572}
   - component: {fileID: 8794353907602946660}
   m_Layer: 7
-  m_Name: Beer
+  m_Name: PintGlass
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,6 +103,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.8, z: 0.6}
   m_Center: {x: -0.05, y: 0, z: 0}
+--- !u!114 &6880313313626317918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431506533024254292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e73ac3009dd6c043ac8af0cd19e5219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drinkType1: Empty
+  drinkType2: Empty
+  drinkType3: Empty
+  ice: 0
+  beingHeld: 0
 --- !u!54 &3431506533024254294
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -119,22 +136,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &926836258890916222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3431506533024254292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e73ac3009dd6c043ac8af0cd19e5219, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drinkType: Beer
-  snackType: 
-  beingHeld: 0
-  Contents: 0
 --- !u!114 &1168467921352375836
 MonoBehaviour:
   m_ObjectHideFlags: 0
