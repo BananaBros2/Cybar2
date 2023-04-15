@@ -8,7 +8,6 @@ using Photon.Pun;
 
 public class RoomCreatorScript : MonoBehaviourPunCallbacks
 {
-
     public TMP_InputField createInput;
     public TMP_InputField JoinInput;
 
@@ -31,4 +30,5 @@ public class RoomCreatorScript : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.LoadLevel("SampleScene");
     }
+
 }

@@ -18,7 +18,6 @@ public class Seat_Library : MonoBehaviour
     {
         view = GetComponent<PhotonView>();
 
-
         Transform[] allChildren = GetComponentsInChildren<Transform>();
 
         foreach (Transform seat in allChildren)
@@ -29,7 +28,7 @@ public class Seat_Library : MonoBehaviour
         
     }
         // Update is called once per frame
-        void Update()
+    void Update()
     {
         
     }

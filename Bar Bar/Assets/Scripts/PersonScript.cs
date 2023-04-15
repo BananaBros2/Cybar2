@@ -21,7 +21,7 @@ public class PersonScript : MonoBehaviour
     {
         if(goal == null)
         {
-            goal = GameObject.Find("Seats").transform.GetChild(Random.Range(0, 1));
+            goal = GameObject.Find("Seats").transform.GetChild(Random.Range(0, GameObject.Find("Seats").transform.childCount-1));
             agent.destination = goal.position;
         }
         if(seated)

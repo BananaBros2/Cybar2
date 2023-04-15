@@ -13,7 +13,6 @@ public class ContainerData : MonoBehaviour
     private Camera cam;
     public Image progressBar;
 
-
     private void Start()
     {
         count = capacity;

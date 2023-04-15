@@ -114,9 +114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e73ac3009dd6c043ac8af0cd19e5219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drinkType1: Empty
-  drinkType2: Empty
-  drinkType3: Empty
+  drinkID: 0
+  drinkType1: _Empty_
+  drinkType2: _Empty_
+  drinkType3: _Empty_
   ice: 0
   ingredientsList: []
   beingHeld: 0

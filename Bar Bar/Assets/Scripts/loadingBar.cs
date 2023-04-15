@@ -24,6 +24,5 @@ public class loadingBar : MonoBehaviour
         progressBar.fillAmount = fillAmount;
 
         transform.LookAt(new Vector3(transform.position.x, cam.transform.position.y, cam.transform.position.z));
-        
     }
 }

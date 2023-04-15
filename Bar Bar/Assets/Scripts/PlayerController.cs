@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public bool readyToThrow;
     public float forceMulti;
 
+
     //  Photon   ------------------------
     PhotonView view;
 
@@ -69,6 +70,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         }
 
     }
+
 
 
     private void Update()
@@ -185,17 +187,17 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
                     
 
-                    if (closest.transform.GetComponent<ItemData>().drinkType1 == "Empty")
+                    if (closest.transform.GetComponent<ItemData>().drinkType1 == "_Empty_")
                     {
                         closest.transform.GetComponent<ItemData>().drinkType1 = content;
                         throwOrMix.GetComponent<ContainerData>().count -= 1;
                     }
-                    else if (closest.transform.GetComponent<ItemData>().drinkType2 == "Empty")
+                    else if (closest.transform.GetComponent<ItemData>().drinkType2 == "_Empty_")
                     {
                         closest.transform.GetComponent<ItemData>().drinkType2 = content;
                         throwOrMix.GetComponent<ContainerData>().count -= 1;
                     }
-                    else if (closest.transform.GetComponent<ItemData>().drinkType3 == "Empty")
+                    else if (closest.transform.GetComponent<ItemData>().drinkType3 == "_Empty_")
                     {
                         closest.transform.GetComponent<ItemData>().drinkType3 = content;
                         throwOrMix.GetComponent<ContainerData>().count -= 1;

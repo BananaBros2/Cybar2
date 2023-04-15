@@ -6,6 +6,7 @@ using Photon.Pun;
 
 public class PlayerSpawner : MonoBehaviour
 {
+
     public GameObject playerPrefab;
     private GameObject player;
 

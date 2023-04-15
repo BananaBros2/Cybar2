@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ServerConnectionScript : MonoBehaviourPunCallbacks
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class ServerConnectionScript : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
         LoadLobbyScene();
     }
+
 
     public void LoadLobbyScene()
     {

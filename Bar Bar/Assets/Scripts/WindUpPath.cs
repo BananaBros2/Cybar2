@@ -19,7 +19,6 @@ public class WindUpPath : MonoBehaviour
     {
         //if (grabScript.itemIsPicked == true) { agent.isStopped = true; }
         turnKey.transform.rotation *= Quaternion.AngleAxis(70 * agent.speed * Time.deltaTime, Vector3.left);
-
     }
 
 
@@ -45,7 +44,6 @@ public class WindUpPath : MonoBehaviour
         //    }
         //}
 
+
     }
-
-
 }

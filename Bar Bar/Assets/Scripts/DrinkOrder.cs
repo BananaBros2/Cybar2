@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Order : MonoBehaviour
+public class DrinkOrder : MonoBehaviour
 {
     public string desiredDrink;
     public string[] highballs;
 
-    private void Start()
+    void Start()
     {
         List<string> highballs = new List<string> { "Vodka", "Orange", "Grapefruit", "Cranberry", "Pineapple"};
-
     }
 
     private void OnTriggerEnter(Collider other)

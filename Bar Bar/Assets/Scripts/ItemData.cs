@@ -6,14 +6,14 @@ using System.Linq;
 
 public class ItemData : MonoBehaviour
 {
+    public int drinkID;
 
-    public string drinkType1 = "Empty";
-    public string drinkType2 = "Empty";
-    public string drinkType3 = "Empty";
+    public string drinkType1 = "_Empty_";
+    public string drinkType2 = "_Empty_";
+    public string drinkType3 = "_Empty_";
     public bool ice = false;
 
     public List<string> ingredientsList;
-
 
     public bool beingHeld = false;
 
@@ -26,13 +26,25 @@ public class ItemData : MonoBehaviour
     Color pineapple = new Color(239, 213, 94);
     Color finalColour;
 
-    string drinkName;
-
     private void Update()
     {
+        ingredientsList = new List<string> { drinkType1, drinkType2, drinkType3 };
+
+        ingredientsList.Sort((x, y) => string.Compare(x, y));
+
+        if (ingredientsList.SequenceEqual(new List<string> { "_Empty_", "Grapefruit", "Vodka" })) { drinkID = 1; }          // Greyhound
+        else if (ingredientsList.SequenceEqual(new List<string> { "_Empty_", "Orange", "Vodka" })) { drinkID = 2; }         // Screwdriver
+        else if (ingredientsList.SequenceEqual(new List<string> { "_Empty_", "Cranberry", "Vodka" })) { drinkID = 3; }      // Cape Codder
+        else if (ingredientsList.SequenceEqual(new List<string> { "Cranberry", "Grapefruit", "Vodka" })) { drinkID = 4; }   // Sea Breeze
+        else if (ingredientsList.SequenceEqual(new List<string> { "Cranberry", "Orange", "Vodka" })) { drinkID = 5; }       // Madras
+        else if (ingredientsList.SequenceEqual(new List<string> { "Cranberry", "Pineapple", "Vodka" })) { drinkID = 6; }    // Bay Breeze
+        else { drinkID = -1; }                                                                                              // Unknown
+
+        gameObject.GetComponent<Renderer>().material.color = finalColour;
+
         Color GetColor(string flavour)
         {
-            if (flavour == "Empty") { return blank; }
+            if (flavour == "_Empty_") { return blank; }
 
             if (flavour == "Vodka") { return vodka; }
             else if(flavour == "Orange") { return orange; }
@@ -67,11 +79,7 @@ public class ItemData : MonoBehaviour
             print("4");
         }
         
-        gameObject.GetComponent<Renderer>().material.color = finalColour;
 
-        ingredientsList = new List<string> { drinkType1, drinkType2, drinkType3 };
-
-        ingredientsList.Sort((x, y) => string.Compare(x, y));
     }
 
 }
