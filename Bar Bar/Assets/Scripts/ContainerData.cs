@@ -18,14 +18,13 @@ public class ContainerData : MonoBehaviour
         count = capacity;
 
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        progressBar = transform.GetChild(0).GetComponentInChildren<Image>();
+        progressBar = transform.GetChild(0).transform.GetChild(1).GetComponent<Image>();
         progressBar.fillAmount = count / capacity;
     }
 
     private void Update()
     {
         progressBar.fillAmount = (float)count / (float)capacity;
-        print(count / capacity);
 
         transform.GetChild(0).LookAt(new Vector3(transform.position.x, cam.transform.position.y, cam.transform.position.z));
 

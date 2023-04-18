@@ -10,6 +10,7 @@ TagManager:
   - Keg
   - NewPlayer
   - Container
+  - Customer
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Player
   - Items
   - People
-  - 
+  - Invisible Walls
   - 
   - 
   - 

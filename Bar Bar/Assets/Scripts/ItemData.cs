@@ -19,7 +19,7 @@ public class ItemData : MonoBehaviour
 
     Color blank = new Color(0, 0, 0);
 
-    Color vodka = new Color(255, 255, 255);
+    Color vodka = new Color(200, 200, 200);
     Color orange = new Color(255, 81, 0);
     Color cranberry = new Color(255, 0, 0);
     Color grapefruit = new Color(255, 134, 0);
@@ -32,12 +32,21 @@ public class ItemData : MonoBehaviour
 
         ingredientsList.Sort((x, y) => string.Compare(x, y));
 
+        // BASE DRINKS
         if (ingredientsList.SequenceEqual(new List<string> { "_Empty_", "Grapefruit", "Vodka" })) { drinkID = 1; }          // Greyhound
         else if (ingredientsList.SequenceEqual(new List<string> { "_Empty_", "Orange", "Vodka" })) { drinkID = 2; }         // Screwdriver
         else if (ingredientsList.SequenceEqual(new List<string> { "_Empty_", "Cranberry", "Vodka" })) { drinkID = 3; }      // Cape Codder
         else if (ingredientsList.SequenceEqual(new List<string> { "Cranberry", "Grapefruit", "Vodka" })) { drinkID = 4; }   // Sea Breeze
         else if (ingredientsList.SequenceEqual(new List<string> { "Cranberry", "Orange", "Vodka" })) { drinkID = 5; }       // Madras
         else if (ingredientsList.SequenceEqual(new List<string> { "Cranberry", "Pineapple", "Vodka" })) { drinkID = 6; }    // Bay Breeze
+        // ALTERNATIVE DRINKS 
+        else if (ingredientsList.SequenceEqual(new List<string> { "Grapefruit", "Grapefruit", "Vodka" })) { drinkID = 7; }  // Weak Greyhound
+        else if (ingredientsList.SequenceEqual(new List<string> { "Grapefruit", "Vodka", "Vodka" })) { drinkID = 8; }       // Strong Greyhound
+        else if (ingredientsList.SequenceEqual(new List<string> { "Orange", "Orange", "Vodka" })) { drinkID = 9; }         // Weak Screwdriver
+        else if (ingredientsList.SequenceEqual(new List<string> { "Orange", "Vodka", "Vodka" })) { drinkID = 10; }         // Strong Screwdriver
+        else if (ingredientsList.SequenceEqual(new List<string> { "Cranberry", "Cranberry", "Vodka" })) { drinkID = 11; }      // Weak Cape Codder
+        else if (ingredientsList.SequenceEqual(new List<string> { "Cranberry", "Vodka", "Vodka" })) { drinkID = 12; }      // Strong Cape Codder
+
         else { drinkID = -1; }                                                                                              // Unknown
 
         gameObject.GetComponent<Renderer>().material.color = finalColour;
@@ -61,22 +70,22 @@ public class ItemData : MonoBehaviour
         if(colour1 == blank)
         {
             finalColour = new Color(0.85f, 0.85f, 0.85f);
-            print("1");
+            //print("1");
         }
         else if (colour2 == blank)
         {
             finalColour = colour1 / 255;
-            print("2");
+            //print("2");
         }
         else if (colour3 == blank)
         {
             finalColour = new Color((colour1.r + colour2.r) / 2 / 255, (colour1.g + colour2.g) / 2 / 255, (colour1.b + colour2.b) / 2 / 255);
-            print("3");
+            //print("3");
         }
         else if (colour3 != blank)
         {
             finalColour = new Color((colour1.r + colour2.r + colour3.r) / 3 / 255, (colour1.g + colour2.g + colour3.g) / 3 / 255, (colour1.b + colour2.b + colour3.b) / 3 / 255);
-            print("4");
+            //print("4");
         }
         
 

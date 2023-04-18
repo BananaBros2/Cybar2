@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Linq;
 
 public class PersonScript : MonoBehaviour
 {
+    public GameObject targetSeat;
     public Transform goal;
     //public GameObject turnKey;
     NavMeshAgent agent;
     public bool seated = false;
+
+    public List<GameObject> allTables;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +24,22 @@ public class PersonScript : MonoBehaviour
 
     private void Update()
     {
-        if(goal == null)
+        
+        if (goal == null)
         {
-            goal = GameObject.Find("Seats").transform.GetChild(Random.Range(0, GameObject.Find("Seats").transform.childCount-1));
+            allTables = GameObject.Find("Seats").GetComponent<availiableSeats>().allTables;
+            int randomNumber = Random.Range(0, allTables.Count - 1);
+
+            targetSeat = allTables[randomNumber];
+
+            goal = targetSeat.transform;
+            GameObject.Find("Seats").GetComponent<availiableSeats>().tablesInUse.Add(allTables[randomNumber]);
+            GameObject.Find("Seats").GetComponent<availiableSeats>().allTables.RemoveAt(randomNumber);
+
             agent.destination = goal.position;
         }
-        if(seated)
+
+        if (seated)
         {
             
         }
@@ -34,6 +49,7 @@ public class PersonScript : MonoBehaviour
     {
         if (collidedObject.transform == goal)
         {
+            goal.GetComponent<TableOrder>().satOn = true;
             seated = true;
             agent.enabled = false;
             GetComponent<Rigidbody>().isKinematic = true;
