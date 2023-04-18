@@ -1325,9 +1325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: Orange
-  count: 0
   capacity: 10
-  progressBar: {fileID: 0}
+  count: 0
+  image: {fileID: 0}
 --- !u!136 &326910039
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2900,9 +2900,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: Cranberry
-  count: 0
   capacity: 10
-  progressBar: {fileID: 0}
+  count: 0
+  image: {fileID: 0}
 --- !u!136 &575290884
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3286,9 +3286,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: Grapefruit
-  count: 0
   capacity: 10
-  progressBar: {fileID: 0}
+  count: 0
+  image: {fileID: 0}
 --- !u!136 &642883820
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6702,9 +6702,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: Vodka
-  count: 0
   capacity: 10
-  progressBar: {fileID: 0}
+  count: 0
+  image: {fileID: 0}
 --- !u!1 &1297535148
 GameObject:
   m_ObjectHideFlags: 0
@@ -7781,9 +7781,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: Pineapple
-  count: 0
   capacity: 10
-  progressBar: {fileID: 0}
+  count: 0
+  image: {fileID: 0}
 --- !u!136 &1426702709
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11335,7 +11335,7 @@ Transform:
   - {fileID: 321462898}
   - {fileID: 1790808975}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1915225374 stripped
 Transform:
@@ -12840,7 +12840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3445298392825800437, guid: c8c4ddac7ffdab340916c329b49bd90f, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3445298392825800437, guid: c8c4ddac7ffdab340916c329b49bd90f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12995,9 +12995,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: Glass
-  count: 0
   capacity: 6
-  progressBar: {fileID: 0}
+  count: 0
+  image: {fileID: 0}
 --- !u!1001 &9187285077664802158
 PrefabInstance:
   m_ObjectHideFlags: 0

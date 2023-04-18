@@ -27,14 +27,14 @@ public class PersonScript : MonoBehaviour
         
         if (goal == null)
         {
-            allTables = GameObject.Find("Seats").GetComponent<availiableSeats>().allTables;
+            allTables = GameObject.Find("Seats").GetComponent<AvailiableSeats>().allTables;
             int randomNumber = Random.Range(0, allTables.Count - 1);
 
             targetSeat = allTables[randomNumber];
 
             goal = targetSeat.transform;
-            GameObject.Find("Seats").GetComponent<availiableSeats>().tablesInUse.Add(allTables[randomNumber]);
-            GameObject.Find("Seats").GetComponent<availiableSeats>().allTables.RemoveAt(randomNumber);
+            GameObject.Find("Seats").GetComponent<AvailiableSeats>().tablesInUse.Add(allTables[randomNumber]);
+            GameObject.Find("Seats").GetComponent<AvailiableSeats>().allTables.RemoveAt(randomNumber);
 
             agent.destination = goal.position;
         }

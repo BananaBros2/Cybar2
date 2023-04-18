@@ -28,6 +28,7 @@ public class ItemData : MonoBehaviour
 
     private void Update()
     {
+
         ingredientsList = new List<string> { drinkType1, drinkType2, drinkType3 };
 
         ingredientsList.Sort((x, y) => string.Compare(x, y));

@@ -210,6 +210,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             readyToThrow = true;
             if (forceMulti > 10)
             {
+
                 //thisGameObject.transform.position += transform.forward;
                 //thisGameObject.transform.position -= new Vector3(0, 1, 0);
                 closest.transform.GetComponent<Rigidbody>().useGravity = true;
