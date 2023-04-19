@@ -50,7 +50,7 @@ public class ItemData : MonoBehaviour
 
         else { drinkID = -1; }                                                                                              // Unknown
 
-        gameObject.GetComponent<Renderer>().material.color = finalColour;
+        transform.GetChild(0).GetComponent<Renderer>().material.color = finalColour;
 
         Color GetColor(string flavour)
         {

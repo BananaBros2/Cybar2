@@ -98,6 +98,7 @@
 -define:NET_4_6
 -define:NET_UNITY_4_8
 -define:ENABLE_PROFILER
+-define:UNITY_SERVER
 -define:DEBUG
 -define:TRACE
 -define:UNITY_ASSERTIONS
@@ -115,10 +116,6 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
--define:PHOTON_UNITY_NETWORKING
--define:PUN_2_0_OR_NEWER
--define:PUN_2_OR_NEWER
--define:PUN_2_19_OR_NEWER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll"

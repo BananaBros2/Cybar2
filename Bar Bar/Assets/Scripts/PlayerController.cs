@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             Vector3 currentPosition = transform.position;
             foreach (Transform potentialTarget in objects)
             {
-                print(potentialTarget);
+                //print(potentialTarget);
                 Vector3 directionToTarget = potentialTarget.position - currentPosition;
                 float dSqrToTarget = directionToTarget.sqrMagnitude;
 

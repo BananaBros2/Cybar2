@@ -98,6 +98,7 @@
 -define:NET_STANDARD
 -define:DEVELOPMENT_BUILD
 -define:ENABLE_PROFILER
+-define:UNITY_SERVER
 -define:DEBUG
 -define:TRACE
 -define:UNITY_ASSERTIONS
@@ -109,10 +110,6 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
--define:PHOTON_UNITY_NETWORKING
--define:PUN_2_0_OR_NEWER
--define:PUN_2_OR_NEWER
--define:PUN_2_19_OR_NEWER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll"
@@ -317,9 +314,6 @@
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/UnityEngine.UI.ref.dll"
-"Assets/loadingBar.cs"
-"Assets/LoadingCube.cs"
-"Assets/PersonScript.cs"
 "Assets/Photon/PhotonChat/Demos/Common/EventSystemSpawner.cs"
 "Assets/Photon/PhotonChat/Demos/Common/OnStartDelete.cs"
 "Assets/Photon/PhotonChat/Demos/Common/TextButtonTransition.cs"
@@ -334,15 +328,23 @@
 "Assets/Photon/PhotonLibs/WebSocket/SocketWebTcp.cs"
 "Assets/Photon/PhotonLibs/WebSocket/WebSocket.cs"
 "Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/ConnectAndJoinRandomLb.cs"
+"Assets/Scripts/AvailiableSeats.cs"
 "Assets/Scripts/ContainerData.cs"
 "Assets/Scripts/ItemData.cs"
+"Assets/Scripts/loadingBar.cs"
+"Assets/Scripts/LoadingCube.cs"
+"Assets/Scripts/LookAt.cs"
+"Assets/Scripts/PersonScript.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/PlayerSpawner.cs"
 "Assets/Scripts/RoomCreatorScript.cs"
+"Assets/Scripts/Seat_Library.cs"
 "Assets/Scripts/ServerConnectionScript.cs"
-"Assets/Scripts/TableTest.cs"
+"Assets/Scripts/SpillScript.cs"
+"Assets/Scripts/TableOrder.cs"
+"Assets/Scripts/Timer.cs"
+"Assets/Scripts/TriggerEnter.cs"
 "Assets/Scripts/WindUpPath.cs"
-"Assets/Seat_Library.cs"
 -langversion:9.0
 
 /deterministic

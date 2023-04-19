@@ -12,6 +12,7 @@ public class PersonScript : MonoBehaviour
     NavMeshAgent agent;
     public bool seated = false;
 
+    int randomNumber;
     public List<GameObject> allTables;
 
 
@@ -28,7 +29,7 @@ public class PersonScript : MonoBehaviour
         if (goal == null)
         {
             allTables = GameObject.Find("Seats").GetComponent<AvailiableSeats>().allTables;
-            int randomNumber = Random.Range(0, allTables.Count - 1);
+            randomNumber = Random.Range(0, allTables.Count - 1);
 
             targetSeat = allTables[randomNumber];
 
@@ -49,7 +50,14 @@ public class PersonScript : MonoBehaviour
     {
         if (collidedObject.transform == goal)
         {
+            if (collidedObject.transform.tag == "Finish")
+            {
+                Destroy(gameObject);
+                return;
+            }
+
             goal.GetComponent<TableOrder>().satOn = true;
+            goal.GetComponent<TableOrder>().person = gameObject;
             seated = true;
             agent.enabled = false;
             GetComponent<Rigidbody>().isKinematic = true;
