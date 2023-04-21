@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 2171712481418459700}
   - component: {fileID: 2171712481418459699}
   - component: {fileID: 2171712481418459696}
+  - component: {fileID: 4097953563217124658}
   m_Layer: 0
   m_Name: BarStool (1)
   m_TagString: Table
@@ -332,6 +333,7 @@ MonoBehaviour:
   desiredDrink: 0
   seatID: 0
   satOn: 0
+  person: {fileID: 0}
   orderRecieved: 0
   drinkImages:
   - {fileID: -426566555, guid: c5bbaa5baa4f1b44aa70c2a7b3c62df0, type: 3}
@@ -350,3 +352,27 @@ MonoBehaviour:
   m_MainTexture: {fileID: 0}
   m_Normal: {fileID: 0}
   m_Metal: {fileID: 0}
+--- !u!114 &4097953563217124658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2171712481418459703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 2
+  OwnershipTransfer: 2
+  observableSearch: 0
+  ObservedComponents:
+  - {fileID: 0}
+  - {fileID: 0}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0

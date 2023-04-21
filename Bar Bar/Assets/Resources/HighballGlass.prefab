@@ -121,7 +121,9 @@ MonoBehaviour:
   drinkType3: _Empty_
   ice: 0
   ingredientsList: []
+  oldList: []
   beingHeld: 0
+  view: {fileID: 0}
 --- !u!54 &3431506533024254294
 Rigidbody:
   m_ObjectHideFlags: 0

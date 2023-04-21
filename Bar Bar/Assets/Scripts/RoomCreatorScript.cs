@@ -8,7 +8,6 @@ using Photon.Pun;
 
 public class RoomCreatorScript : MonoBehaviourPunCallbacks
 {
-
     public TMP_InputField createInput;
     public TMP_InputField JoinInput;
 
@@ -19,11 +18,15 @@ public class RoomCreatorScript : MonoBehaviourPunCallbacks
 
     public void CreateRoom()
     {
+        if (createInput.text == "")
+            return;
         PhotonNetwork.CreateRoom(createInput.text);
     }
 
     public void JoinRoom()
     {
+        if (JoinInput.text == "")
+            return;
         PhotonNetwork.JoinRoom(JoinInput.text);
     }
 

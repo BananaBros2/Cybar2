@@ -16,10 +16,18 @@ public class PlayerSpawner : MonoBehaviour
     public float minZ = 2;
     public float maxZ = 2;
 
+
     void Start()
     {
         Vector3 randomPosition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ));
-        player = PhotonNetwork.Instantiate("Player", randomPosition, Quaternion.identity);
+        if (PhotonNetwork.OfflineMode == false)
+        {
+            player = PhotonNetwork.Instantiate("Player", randomPosition, Quaternion.identity);
+        }
+        else
+        {
+            player = Instantiate(playerPrefab, randomPosition, Quaternion.identity);
+        }
         //player.gameObject.name = ("Player " + PhotonNetwork.LocalPlayer.ActorNumber);
     }
 }

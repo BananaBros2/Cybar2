@@ -19,7 +19,6 @@ public class ServerConnectionScript : MonoBehaviourPunCallbacks
         LoadLobbyScene();
     }
 
-
     public void LoadLobbyScene()
     {
         SceneManager.LoadScene("MultiplayerLobby");

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 public class WindUpPath : MonoBehaviour
 {
-
     public Transform goal;
     public GameObject turnKey;
     NavMeshAgent agent;

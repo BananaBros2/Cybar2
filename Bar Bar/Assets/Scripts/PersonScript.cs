@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
+using Photon.Pun;
 
 public class PersonScript : MonoBehaviour
 {
@@ -15,17 +16,24 @@ public class PersonScript : MonoBehaviour
     int randomNumber;
     public List<GameObject> allTables;
 
+    public PhotonView view;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        view = GetComponent<PhotonView>();
         agent = GetComponent<NavMeshAgent>();
     }
 
 
-    private void Update()
+    private void FixedUpdate()
     {
-        
+        if (!PhotonNetwork.IsMasterClient)
+        { 
+            return;
+        }
+
         if (goal == null)
         {
             allTables = GameObject.Find("Seats").GetComponent<AvailiableSeats>().allTables;
@@ -38,16 +46,17 @@ public class PersonScript : MonoBehaviour
             GameObject.Find("Seats").GetComponent<AvailiableSeats>().allTables.RemoveAt(randomNumber);
 
             agent.destination = goal.position;
+            PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
+            view.RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, goal.position, goal.rotation, seated);
         }
 
-        if (seated)
-        {
-            
-        }
     }
 
     private void OnCollisionEnter(Collision collidedObject)
     {
+        if (!view.IsMine)
+            return;
+
         if (collidedObject.transform == goal)
         {
             if (collidedObject.transform.tag == "Finish")
@@ -63,9 +72,30 @@ public class PersonScript : MonoBehaviour
             GetComponent<Rigidbody>().isKinematic = true;
             transform.position = new Vector3(goal.position.x, goal.position.y + 1.5f, goal.position.z);
             transform.rotation = Quaternion.Euler(0, goal.rotation.y, goal.rotation.z);
+            PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
+            view.RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, goal.position, goal.rotation, seated);
         }
 
     }
-                                                                                                                                                                                    
+
+
+    [PunRPC]
+    void RPC_ValueChanges(Vector3 RPCgoalPosition, Quaternion RPCgoalRotation , bool RPCseated)
+    {
+        if(RPCseated == true)
+        {
+            agent.enabled = false;
+            GetComponent<Rigidbody>().isKinematic = true;
+            transform.position = new Vector3(RPCgoalPosition.x, RPCgoalPosition.y + 1.5f, RPCgoalPosition.z);
+            transform.rotation = Quaternion.Euler(0, RPCgoalRotation.y, RPCgoalRotation.z);
+        }
+        else
+        {
+            agent.enabled = true;
+            GetComponent<Rigidbody>().isKinematic = false;
+            agent.destination = RPCgoalPosition;
+        }
+
+    }
 
 }

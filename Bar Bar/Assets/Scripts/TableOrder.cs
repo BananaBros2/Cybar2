@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Photon.Pun;
 
 public class TableOrder : MonoBehaviour
 {
@@ -19,19 +20,27 @@ public class TableOrder : MonoBehaviour
     public Texture m_MainTexture, m_Normal, m_Metal;
     Renderer m_Renderer;
 
+
+    PhotonView view;
+
     private void Start()
     {
         seatID = transform.GetSiblingIndex();
-        print(seatID);
     }
 
-    private void Update()
+    public void FixedUpdate()
     {
+        view = GetComponent<PhotonView>();
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+
         if (satOn && drinkChosen == false)
         {
             desiredDrink = Random.RandomRange(1, 7);
             drinkChosen = true;
             transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = drinkImages[desiredDrink];
+            PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
+            GetComponent<PhotonView>().RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, desiredDrink, satOn, orderRecieved);
         }
         if (orderRecieved)
         {
@@ -44,7 +53,22 @@ public class TableOrder : MonoBehaviour
             desiredDrink = -2;
             satOn = false;
             orderRecieved = false;
+            PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
+            view.RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, desiredDrink, satOn, orderRecieved);
         }
     }
-    
+
+
+    [PunRPC]
+    void RPC_ValueChanges(int RPCdrink, bool RPCsatOn, bool RPCrecieved)
+    {
+        desiredDrink = RPCdrink;
+        satOn = RPCsatOn;
+        orderRecieved = RPCrecieved;
+        if (desiredDrink != -2)
+        {
+            transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = drinkImages[desiredDrink];
+        }
+    }
+
 }

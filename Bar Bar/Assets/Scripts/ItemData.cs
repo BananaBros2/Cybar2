@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using System.Linq;
+using Photon.Pun;
 
 public class ItemData : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class ItemData : MonoBehaviour
     public bool ice = false;
 
     public List<string> ingredientsList;
+    public List<string> oldList;
 
     public bool beingHeld = false;
 
@@ -26,13 +28,27 @@ public class ItemData : MonoBehaviour
     Color pineapple = new Color(239, 213, 94);
     Color finalColour;
 
+    public PhotonView view;
+    bool skip = true;
+    private void Start()
+    {
+        view = GetComponent<PhotonView>();
+        oldList = new List<string> { "_Empty_", "_Empty_", "_Empty_" };
+    }
+
     private void Update()
     {
-
         ingredientsList = new List<string> { drinkType1, drinkType2, drinkType3 };
-
         ingredientsList.Sort((x, y) => string.Compare(x, y));
-
+        if (oldList.SequenceEqual(ingredientsList) && !skip)
+        {
+            return;
+        }
+        print(skip);
+        skip = false;
+        print(ingredientsList);
+        oldList = ingredientsList;
+        
         // BASE DRINKS
         if (ingredientsList.SequenceEqual(new List<string> { "_Empty_", "Grapefruit", "Vodka" })) { drinkID = 1; }          // Greyhound
         else if (ingredientsList.SequenceEqual(new List<string> { "_Empty_", "Orange", "Vodka" })) { drinkID = 2; }         // Screwdriver
@@ -88,8 +104,15 @@ public class ItemData : MonoBehaviour
             finalColour = new Color((colour1.r + colour2.r + colour3.r) / 3 / 255, (colour1.g + colour2.g + colour3.g) / 3 / 255, (colour1.b + colour2.b + colour3.b) / 3 / 255);
             //print("4");
         }
-        
-
+        PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
+        view.RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, drinkType1, drinkType2, drinkType3);
     }
 
+    [PunRPC]
+    void RPC_ValueChanges(string NPCType1, string NPCType2, string NPCType3)
+    {
+        drinkType1 = NPCType1;
+        drinkType2 = NPCType2;
+        drinkType3 = NPCType3;
+    }
 }

@@ -248,6 +248,7 @@ MonoBehaviour:
   goal: {fileID: 0}
   seated: 0
   allTables: []
+  view: {fileID: 0}
 --- !u!65 &3445298392825800438
 BoxCollider:
   m_ObjectHideFlags: 0

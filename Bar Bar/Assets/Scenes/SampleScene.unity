@@ -256,6 +256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarStool (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 52
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
 --- !u!4 &112640903 stripped
@@ -720,6 +724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarStool (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 51
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
 --- !u!1 &216459725
@@ -927,6 +935,10 @@ PrefabInstance:
     - target: {fileID: 2171712481418459703, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
       propertyPath: m_Name
       value: BarStool (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
@@ -1442,6 +1454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarStool (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 49
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
 --- !u!4 &355441985 stripped
@@ -1937,6 +1953,10 @@ PrefabInstance:
     - target: {fileID: 2171712481418459703, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
       propertyPath: m_Name
       value: BarStool (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 48
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
@@ -4249,6 +4269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarStool (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 47
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
 --- !u!4 &883295839 stripped
@@ -4382,6 +4406,10 @@ PrefabInstance:
     - target: {fileID: 2171712481418459703, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
       propertyPath: m_Name
       value: BarStool (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 46
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
@@ -4523,6 +4551,10 @@ PrefabInstance:
     - target: {fileID: 2171712481418459703, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
       propertyPath: m_Name
       value: BarStool (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
@@ -5028,6 +5060,10 @@ PrefabInstance:
     - target: {fileID: 2171712481418459703, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
       propertyPath: m_Name
       value: BarStool (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 44
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
@@ -5552,6 +5588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarStool (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 43
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
 --- !u!1001 &1097232926
@@ -5608,6 +5648,10 @@ PrefabInstance:
     - target: {fileID: 2171712481418459703, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
       propertyPath: m_Name
       value: BarStool (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 42
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
@@ -6188,6 +6232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarStool (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 41
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
 --- !u!4 &1195431585 stripped
@@ -6337,7 +6385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3431506533024254298, guid: 1671ca90b8c3eb543affafc4c32a6516, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 2.45
       objectReference: {fileID: 0}
     - target: {fileID: 3431506533024254298, guid: 1671ca90b8c3eb543affafc4c32a6516, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6774,6 +6822,10 @@ PrefabInstance:
     - target: {fileID: 2171712481418459703, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
       propertyPath: m_Name
       value: BarStool (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
@@ -7277,6 +7329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarStool (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 39
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
 --- !u!4 &1370754047 stripped
@@ -7617,6 +7673,10 @@ PrefabInstance:
     - target: {fileID: 2171712481418459703, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
       propertyPath: m_Name
       value: BarStool (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
@@ -10379,6 +10439,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarStool (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 37
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
 --- !u!1 &1744437975
@@ -11925,6 +11989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarStool (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 36
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
 --- !u!4 &1997599647 stripped
@@ -12223,6 +12291,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarStool (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
 --- !u!4 &2019405834 stripped
@@ -12490,6 +12562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarStool (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 34
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
 --- !u!4 &39194167518667387 stripped
@@ -12712,6 +12788,10 @@ PrefabInstance:
     - target: {fileID: 3592508013180880425, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097953563217124658, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}
+      propertyPath: sceneViewId
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8a2185039c04d4cb2d3fcc6719ac58, type: 3}

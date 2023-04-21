@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public bool readyToThrow;
     public float forceMulti;
 
-
     //  Photon   ------------------------
     PhotonView view;
 
@@ -271,5 +270,10 @@ public class PlayerController : MonoBehaviourPunCallbacks
         if (Thrown)
             ObjectSync.transform.GetComponent<Rigidbody>().AddForce(transform.Find("Body").forward * 1000 * 2);
     }
+    
+    [PunRPC]
+    void RPC_ItemChanges()
+    {
 
+    }
 }
