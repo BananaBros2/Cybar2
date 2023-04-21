@@ -21,7 +21,6 @@ public class WindUpPath : MonoBehaviour
         turnKey.transform.rotation *= Quaternion.AngleAxis(70 * agent.speed * Time.deltaTime, Vector3.left);
     }
 
-
     private void OnCollisionEnter(Collision collidedObject)
     {
         if (collidedObject.transform == goal)

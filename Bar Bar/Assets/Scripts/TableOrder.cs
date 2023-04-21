@@ -58,7 +58,6 @@ public class TableOrder : MonoBehaviour
         }
     }
 
-
     [PunRPC]
     void RPC_ValueChanges(int RPCdrink, bool RPCsatOn, bool RPCrecieved)
     {

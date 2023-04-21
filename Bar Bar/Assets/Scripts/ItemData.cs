@@ -38,15 +38,14 @@ public class ItemData : MonoBehaviour
 
     private void Update()
     {
+        transform.GetChild(0).GetComponent<Renderer>().material.color = finalColour;
         ingredientsList = new List<string> { drinkType1, drinkType2, drinkType3 };
         ingredientsList.Sort((x, y) => string.Compare(x, y));
-        if (oldList.SequenceEqual(ingredientsList) && !skip)
+
+        if (oldList.SequenceEqual(ingredientsList))
         {
             return;
         }
-        print(skip);
-        skip = false;
-        print(ingredientsList);
         oldList = ingredientsList;
         
         // BASE DRINKS
@@ -105,14 +104,17 @@ public class ItemData : MonoBehaviour
             //print("4");
         }
         PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
-        view.RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, drinkType1, drinkType2, drinkType3);
+        view.RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, drinkType1, drinkType2, drinkType3, finalColour.r, finalColour.g, finalColour.b, beingHeld);
     }
 
+
     [PunRPC]
-    void RPC_ValueChanges(string NPCType1, string NPCType2, string NPCType3)
+    void RPC_ValueChanges(string RPCType1, string RPCType2, string RPCType3, float RPCred, float RPCgreen, float RPCblue, bool RPCheld)
     {
-        drinkType1 = NPCType1;
-        drinkType2 = NPCType2;
-        drinkType3 = NPCType3;
+        drinkType1 = RPCType1;
+        drinkType2 = RPCType2;
+        drinkType3 = RPCType3;
+        finalColour = new Color(RPCred, RPCgreen, RPCblue);
+        beingHeld = RPCheld;
     }
 }

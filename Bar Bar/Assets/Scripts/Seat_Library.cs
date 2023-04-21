@@ -25,7 +25,6 @@ public class Seat_Library : MonoBehaviour
             checkedItems.Add(seat.GetComponent<Transform>());
             worldItems = checkedItems.ToArray();
         }
-        
     }
         // Update is called once per frame
     void Update()

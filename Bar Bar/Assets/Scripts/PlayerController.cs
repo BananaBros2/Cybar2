@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
             checkedItems.Add(go.GetComponent<Transform>());
             worldItems = checkedItems.ToArray();
         }
-
     }
 
     private void FixedUpdate() // Update is called once per frame
