@@ -107,7 +107,6 @@ public class ItemData : MonoBehaviour
         view.RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, drinkType1, drinkType2, drinkType3, finalColour.r, finalColour.g, finalColour.b, beingHeld);
     }
 
-
     [PunRPC]
     void RPC_ValueChanges(string RPCType1, string RPCType2, string RPCType3, float RPCred, float RPCgreen, float RPCblue, bool RPCheld)
     {

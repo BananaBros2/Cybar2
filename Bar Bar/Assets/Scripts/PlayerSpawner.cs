@@ -29,4 +29,5 @@ public class PlayerSpawner : MonoBehaviour
         }
         //player.gameObject.name = ("Player " + PhotonNetwork.LocalPlayer.ActorNumber);
     }
+
 }

@@ -57,10 +57,22 @@ public class PlayerController : MonoBehaviourPunCallbacks
             float xTranslation = Input.GetAxis("Horizontal") * Time.deltaTime;
             float zTranslation = Input.GetAxis("Vertical") * Time.deltaTime;
 
+            xTranslation = Input.GetAxis("HorizontalAim") * Time.deltaTime;
+            zTranslation = Input.GetAxis("VerticalAim") * Time.deltaTime;
+            if (xTranslation != 0 || zTranslation != 0)
+            {
+                Vector3 input = (new Vector3(Input.GetAxis("HorizontalAim"), Input.GetAxis("VerticalAim"))).normalized;
+                view.transform.GetChild(0).transform.rotation = Quaternion.RotateTowards(transform.GetChild(0).transform.rotation, Quaternion.Euler(Vector3.up * Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg), 1000 * Time.deltaTime);
+            }
+            else
+            {
+                    Vector3 input = (new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"))).normalized;
+                    view.transform.GetChild(0).transform.rotation = Quaternion.RotateTowards(transform.GetChild(0).transform.rotation, Quaternion.Euler(Vector3.up * Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg), 1000 * Time.deltaTime);
+            }
+
             if (xTranslation != 0 || zTranslation != 0)
             {
                 Vector3 input = (new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"))).normalized;
-                view.transform.GetChild(0).transform.rotation = Quaternion.RotateTowards(transform.GetChild(0).transform.rotation, Quaternion.Euler(Vector3.up * Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg), 1000 * Time.deltaTime);
             }
             var normalizedVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
             view.transform.Translate(normalizedVector.x * Time.deltaTime * 10, 0, normalizedVector.y * Time.deltaTime * 10);
@@ -68,7 +80,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
         }
 
     }
-
 
 
     private void Update()
@@ -224,7 +235,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Q) && Holding == true)
+        if (Input.GetKeyUp(KeyCode.Space) && Holding == true)
         {
             closest.transform.GetComponent<Rigidbody>().useGravity = true;
             closest.transform.GetComponent<BoxCollider>().enabled = true;

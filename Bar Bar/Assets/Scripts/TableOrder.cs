@@ -16,11 +16,6 @@ public class TableOrder : MonoBehaviour
 
     public Sprite[] drinkImages;
 
-    //Set these Textures in the Inspector
-    public Texture m_MainTexture, m_Normal, m_Metal;
-    Renderer m_Renderer;
-
-
     PhotonView view;
 
     private void Start()
@@ -47,12 +42,17 @@ public class TableOrder : MonoBehaviour
             person.GetComponent<NavMeshAgent>().enabled = true;
             person.GetComponent<PersonScript>().goal = GameObject.FindGameObjectWithTag("Finish").transform;
             person.GetComponent<NavMeshAgent>().destination = GameObject.FindGameObjectWithTag("Finish").transform.position;
+            
             GameObject.Find("Seats").GetComponent<AvailiableSeats>().tablesInUse.Remove(gameObject);
             GameObject.Find("Seats").GetComponent<AvailiableSeats>().allTables.Add(gameObject);
+
+            GameObject.Find("StatsObject").GetComponent<GameStats>().levelScore += 30;
+
             person.GetComponent<Rigidbody>().isKinematic = false;
             desiredDrink = -2;
             satOn = false;
             orderRecieved = false;
+
             PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
             view.RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, desiredDrink, satOn, orderRecieved);
         }
