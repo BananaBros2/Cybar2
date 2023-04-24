@@ -34,5 +34,4 @@ public class RoomCreatorScript : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.LoadLevel("SampleScene");
     }
-
 }

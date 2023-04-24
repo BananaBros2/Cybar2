@@ -26,6 +26,6 @@ public class ServerConnectionScript : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        //hmm
+        //hm
     } 
 }

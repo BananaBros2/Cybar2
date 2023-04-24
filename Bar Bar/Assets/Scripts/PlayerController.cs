@@ -81,7 +81,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     }
 
-
     private void Update()
     {
         if (!view.IsMine)
