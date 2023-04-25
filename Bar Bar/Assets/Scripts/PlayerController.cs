@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     public bool readyToThrow;
     public float forceMulti;
+    public bool stallThrow;
+    public bool holdingArrow;
 
     //  Photon   ------------------------
     PhotonView view;
@@ -54,13 +56,14 @@ public class PlayerController : MonoBehaviourPunCallbacks
                 //transform.position += Physics.gravity * Time.deltaTime;
             }
 
-            float xTranslation = Input.GetAxis("Horizontal") * Time.deltaTime;
-            float zTranslation = Input.GetAxis("Vertical") * Time.deltaTime;
+            float xTranslation = Input.GetAxis("HorizontalAim") * Time.deltaTime;
+            float zTranslation = Input.GetAxis("VerticalAim") * Time.deltaTime;
 
-            xTranslation = Input.GetAxis("HorizontalAim") * Time.deltaTime;
-            zTranslation = Input.GetAxis("VerticalAim") * Time.deltaTime;
+            holdingArrow = false;
+
             if (xTranslation != 0 || zTranslation != 0)
             {
+                holdingArrow = true;
                 Vector3 input = (new Vector3(Input.GetAxis("HorizontalAim"), Input.GetAxis("VerticalAim"))).normalized;
                 view.transform.GetChild(0).transform.rotation = Quaternion.RotateTowards(transform.GetChild(0).transform.rotation, Quaternion.Euler(Vector3.up * Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg), 1000 * Time.deltaTime);
             }
@@ -119,14 +122,17 @@ public class PlayerController : MonoBehaviourPunCallbacks
             return bestTarget;
         }
 
-        if (Input.GetKey(KeyCode.E) && Holding && readyToThrow)
+        stallThrow = false;
+
+        if (Input.GetKey(KeyCode.Space) && Holding && readyToThrow)
         {
             forceMulti += 300 * Time.deltaTime;
         }
 
 
-        if (Input.GetKey(KeyCode.E) && Holding == false)
+        if (Input.GetKey(KeyCode.Space) && Holding == false && stallThrow == false && holdingArrow == false)
         {
+            stallThrow = true;
             closest = GetClosestObject(worldItems).transform.gameObject;
             pickupDistance = Vector3.Distance(closest.transform.position, transform.position);
 
@@ -182,8 +188,9 @@ public class PlayerController : MonoBehaviourPunCallbacks
         }
 
 
-        if (Input.GetKeyUp(KeyCode.E) && Holding == true)
+        if (Input.GetKeyUp(KeyCode.Space) && Holding == true && stallThrow == false && holdingArrow == false)
         {
+            stallThrow = true;
             throwOrMix = GetClosestObject(worldItems).transform.gameObject;
 
             if (Vector3.Distance(throwOrMix.transform.position, transform.position) < 2.5f)
@@ -234,8 +241,9 @@ public class PlayerController : MonoBehaviourPunCallbacks
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) && Holding == true)
+        if (Input.GetKeyUp(KeyCode.Space) && Holding == true && stallThrow == false && holdingArrow == false)
         {
+            stallThrow = true;
             closest.transform.GetComponent<Rigidbody>().useGravity = true;
             closest.transform.GetComponent<BoxCollider>().enabled = true;
             readyToThrow = false;
