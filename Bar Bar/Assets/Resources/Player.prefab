@@ -231,6 +231,8 @@ MonoBehaviour:
   worldItems: []
   readyToThrow: 0
   forceMulti: 0
+  stallThrow: 0
+  holdingArrow: 0
   Beer: {fileID: 3431506533024254292, guid: 1671ca90b8c3eb543affafc4c32a6516, type: 3}
 --- !u!54 &6402839683396447402
 Rigidbody:

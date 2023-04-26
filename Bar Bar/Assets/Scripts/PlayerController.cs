@@ -241,7 +241,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) && Holding == true && stallThrow == false && holdingArrow == false)
+        if (Input.GetKeyUp(KeyCode.Space) && Holding == true && stallThrow == false && holdingArrow == true)
         {
             stallThrow = true;
             closest.transform.GetComponent<Rigidbody>().useGravity = true;
