@@ -34,10 +34,13 @@ public class ItemData : MonoBehaviour
     {
         view = GetComponent<PhotonView>();
         oldList = new List<string> { "_Empty_", "_Empty_", "_Empty_" };
+        if (drinkType1 == "_Empty_") { transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false; }
+        else { transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true; }
     }
 
     private void Update()
     {
+
         transform.GetChild(0).GetComponent<Renderer>().material.color = finalColour;
         ingredientsList = new List<string> { drinkType1, drinkType2, drinkType3 };
         ingredientsList.Sort((x, y) => string.Compare(x, y));
@@ -47,7 +50,9 @@ public class ItemData : MonoBehaviour
             return;
         }
         oldList = ingredientsList;
-        
+
+        transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
+
         // BASE DRINKS
         if (ingredientsList.SequenceEqual(new List<string> { "_Empty_", "Grapefruit", "Vodka" })) { drinkID = 1; }          // Greyhound
         else if (ingredientsList.SequenceEqual(new List<string> { "_Empty_", "Orange", "Vodka" })) { drinkID = 2; }         // Screwdriver
@@ -112,6 +117,7 @@ public class ItemData : MonoBehaviour
     void RPC_ValueChanges(string RPCType1, string RPCType2, string RPCType3, float RPCred, float RPCgreen, float RPCblue, bool RPCheld)
     {
         drinkType1 = RPCType1;
+        if (drinkType1 != "_Empty_") { transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true; }
         drinkType2 = RPCType2;
         drinkType3 = RPCType3;
         finalColour = new Color(RPCred, RPCgreen, RPCblue);

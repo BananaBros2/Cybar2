@@ -8,9 +8,9 @@ TagManager:
   - Item
   - Table
   - Keg
-  - NewPlayer
   - Container
   - Customer
+  - Computer
   layers:
   - Default
   - TransparentFX

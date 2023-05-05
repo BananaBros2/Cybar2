@@ -52,6 +52,7 @@ MonoBehaviour:
   - SetLobbyPlayersData
   - RPC_ValueChanges
   - RPC_ItemChanges
+  - RPC_PlayerChanges
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

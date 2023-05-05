@@ -6,10 +6,7 @@ using Photon.Pun;
 
 public class PlayerController : MonoBehaviourPunCallbacks
 {
-    // Movement -------------------------
-    bool airbourne = true;
-
-    // Grabbing -------------------------
+    // object Interaction -------------------------
     public float pickupDistance;
     public Transform toFollow;
     private Vector3 offset;
@@ -19,21 +16,22 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public List<Transform> checkedItems;
     public Transform[] worldItems;
 
-    public bool readyToThrow;
-    public float forceMulti;
     public bool stallThrow;
     public bool holdingArrow;
 
+    public bool occupied;
     //  Photon   ------------------------
     PhotonView view;
 
-    public GameObject Beer;
+    public GameObject glassObject;
 
+    // Start Values =========================================================================================================================================
     private void Start()
     {
+        // Sets the photonview variable as the player's photon view component
         view = GetComponent<PhotonView>();
-        //view.Owner.NickName = "Player " + PhotonNetwork.PlayerList.Length;
 
+        // Finds and adds every current game object in the scene with the requested tags to the worldItems list
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Item"))
         {
             checkedItems.Add(go.GetComponent<Transform>());
@@ -44,51 +42,50 @@ public class PlayerController : MonoBehaviourPunCallbacks
             checkedItems.Add(go.GetComponent<Transform>());
             worldItems = checkedItems.ToArray();
         }
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Computer"))
+        {
+            checkedItems.Add(go.GetComponent<Transform>());
+            worldItems = checkedItems.ToArray();
+        }
+
+        //Changes the properties of the physics material to stop the player from sticking to walls
+        transform.GetChild(0).GetComponent<CapsuleCollider>().material.staticFriction = 0;
+        transform.GetChild(0).GetComponent<CapsuleCollider>().material.dynamicFriction = 0;
     }
 
-    private void FixedUpdate() // Update is called once per frame
+    // Fixed Update Content =================================================================================================================================
+    private void FixedUpdate()
     {
-        if (view.IsMine)
+        // Checks if the current view is the owner of the game object, this avoids other players from duplicate running code in this game object.
+        if (!view.IsMine || occupied == true) { return; }
+
+        float xTranslation = Input.GetAxis("HorizontalAim") * Time.deltaTime;
+        float zTranslation = Input.GetAxis("VerticalAim") * Time.deltaTime;
+
+        holdingArrow = false;
+
+        if (xTranslation != 0 || zTranslation != 0)
         {
-            if (airbourne)
-            {
-                transform.GetComponent<Rigidbody>().AddForce(Physics.gravity * Time.deltaTime * 10);
-                //transform.position += Physics.gravity * Time.deltaTime;
-            }
-
-            float xTranslation = Input.GetAxis("HorizontalAim") * Time.deltaTime;
-            float zTranslation = Input.GetAxis("VerticalAim") * Time.deltaTime;
-
-            holdingArrow = false;
-
-            if (xTranslation != 0 || zTranslation != 0)
-            {
-                holdingArrow = true;
-                Vector3 input = (new Vector3(Input.GetAxis("HorizontalAim"), Input.GetAxis("VerticalAim"))).normalized;
-                view.transform.GetChild(0).transform.rotation = Quaternion.RotateTowards(transform.GetChild(0).transform.rotation, Quaternion.Euler(Vector3.up * Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg), 1000 * Time.deltaTime);
-            }
-            else
-            {
-                    Vector3 input = (new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"))).normalized;
-                    view.transform.GetChild(0).transform.rotation = Quaternion.RotateTowards(transform.GetChild(0).transform.rotation, Quaternion.Euler(Vector3.up * Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg), 1000 * Time.deltaTime);
-            }
-
-            if (xTranslation != 0 || zTranslation != 0)
-            {
-                Vector3 input = (new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"))).normalized;
-            }
-            var normalizedVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-            view.transform.Translate(normalizedVector.x * Time.deltaTime * 10, 0, normalizedVector.y * Time.deltaTime * 10);
-
+            holdingArrow = true;
+            Vector3 input = (new Vector3(Input.GetAxis("HorizontalAim"), Input.GetAxis("VerticalAim"))).normalized;
+            view.transform.GetChild(0).transform.rotation = Quaternion.RotateTowards(transform.GetChild(0).transform.rotation, Quaternion.Euler(Vector3.up * Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg), 1000 * Time.deltaTime);
         }
+        else
+        {
+            Vector3 input = (new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"))).normalized;
+            view.transform.GetChild(0).transform.rotation = Quaternion.RotateTowards(transform.GetChild(0).transform.rotation, Quaternion.Euler(Vector3.up * Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg), 1000 * Time.deltaTime);
+        }
+
+        var normalizedVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        GetComponent<Rigidbody>().velocity = new Vector3(normalizedVector.x * Time.deltaTime * 500, GetComponent<Rigidbody>().velocity.y - 0.5f, normalizedVector.y * Time.deltaTime * 500);
 
     }
 
     private void Update()
     {
-        if (!view.IsMine)
-            return;
-
+        if (!view.IsMine ) { return; }
+        if (occupied == true) { return; }
+        
         Transform GetClosestObject(Transform[] objects)
         {
             Transform bestTarget = null;
@@ -96,7 +93,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             Vector3 currentPosition = transform.position;
             foreach (Transform potentialTarget in objects)
             {
-                //print(potentialTarget);
+
                 Vector3 directionToTarget = potentialTarget.position - currentPosition;
                 float dSqrToTarget = directionToTarget.sqrMagnitude;
 
@@ -110,13 +107,20 @@ public class PlayerController : MonoBehaviourPunCallbacks
                 }
                 if (potentialTarget.tag == "Container")
                 {
-                    if (dSqrToTarget < closestDistanceSqr && potentialTarget.GetComponent<ContainerData>().count > 0)
+                    if (dSqrToTarget + 0.5f < closestDistanceSqr && potentialTarget.GetComponent<ContainerData>().count > 0)
                     {
-                        closestDistanceSqr = dSqrToTarget;
+                        closestDistanceSqr = dSqrToTarget + 0.5f;
                         bestTarget = potentialTarget;
                     }
                 }
-
+                if (potentialTarget.tag == "Computer")
+                {
+                    if (dSqrToTarget + 0.5f < closestDistanceSqr && potentialTarget.GetComponent<Computer>().inUse == false)
+                    {
+                        closestDistanceSqr = dSqrToTarget + 0.5f;
+                        bestTarget = potentialTarget;
+                    }
+                }
             }
 
             return bestTarget;
@@ -124,13 +128,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         stallThrow = false;
 
-        if (Input.GetKey(KeyCode.Space) && Holding && readyToThrow)
-        {
-            forceMulti += 300 * Time.deltaTime;
-        }
-
-
-        if (Input.GetKey(KeyCode.Space) && Holding == false && stallThrow == false && holdingArrow == false)
+        if (Input.GetKeyUp(KeyCode.Space) && Holding == false && stallThrow == false)
         {
             stallThrow = true;
             closest = GetClosestObject(worldItems).transform.gameObject;
@@ -144,14 +142,15 @@ public class PlayerController : MonoBehaviourPunCallbacks
                     {
                         closest.transform.GetChild(closest.GetComponent<ContainerData>().count).gameObject.SetActive(false);
                         closest.GetComponent<ContainerData>().count -= 1;
-                        closest = PhotonNetwork.Instantiate(Beer.name, transform.position, Quaternion.identity);
+                        closest = PhotonNetwork.Instantiate(glassObject.name, transform.position, Quaternion.identity);
                         checkedItems.Add(closest.transform);
                         worldItems = checkedItems.ToArray();
+                        Holding = true;
                     }
                     
                 }
                
-                if (closest.tag == "Item")
+                if (closest.tag == "Item" || closest.tag == "Container")
                 {
                     toFollow = transform.Find("Body");
 
@@ -162,14 +161,25 @@ public class PlayerController : MonoBehaviourPunCallbacks
                     closest.GetComponent<Rigidbody>().velocity = Vector3.zero;
                     GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                     Holding = true;
-                    forceMulti = 0;
 
                     int ObjectRPCID = closest.GetComponent<PhotonView>().ViewID;
                     Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
                     Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
-                    view.RPC("RPC_ValueChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, true, false, true);
+                    view.RPC("RPC_ItemChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, true, false, true, closest.tag);
+
                 }
-                
+
+                if (closest.tag == "Computer")
+                {
+                    closest.transform.GetChild(1).gameObject.SetActive(true);
+                    closest.GetComponent<Computer>().inUse = true;
+                    print("hello");
+                    PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_PlayerChanges");
+                    view.RPC("RPC_PlayerChanges", RpcTarget.AllBuffered, true);
+                    occupied = true;
+
+                }
+
             }
 
         }
@@ -184,7 +194,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             int ObjectRPCID = closest.GetComponent<PhotonView>().ViewID;
             Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
             Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
-            view.RPC("RPC_ValueChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, true, false, true);
+            view.RPC("RPC_ItemChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, true, false, true, closest.tag);
         }
 
 
@@ -193,10 +203,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
             stallThrow = true;
             throwOrMix = GetClosestObject(worldItems).transform.gameObject;
 
+
             if (Vector3.Distance(throwOrMix.transform.position, transform.position) < 2.5f)
             {
-                if (throwOrMix.tag == "Container" && throwOrMix.GetComponent<ContainerData>().count > 0)
+                if (closest.tag != "Container" && throwOrMix.tag == "Container" && throwOrMix.GetComponent<ContainerData>().count > 0)
                 {
+
                     string content = throwOrMix.GetComponent<ContainerData>().contents;
                     if (content == "Glass") { return; }
 
@@ -205,16 +217,19 @@ public class PlayerController : MonoBehaviourPunCallbacks
                     if (closest.transform.GetComponent<ItemData>().drinkType1 == "_Empty_")
                     {
                         closest.transform.GetComponent<ItemData>().drinkType1 = content;
+                        throwOrMix.transform.GetChild(throwOrMix.GetComponent<ContainerData>().count).gameObject.SetActive(false);
                         throwOrMix.GetComponent<ContainerData>().count -= 1;
                     }
                     else if (closest.transform.GetComponent<ItemData>().drinkType2 == "_Empty_")
                     {
                         closest.transform.GetComponent<ItemData>().drinkType2 = content;
+                        throwOrMix.transform.GetChild(throwOrMix.GetComponent<ContainerData>().count).gameObject.SetActive(false);
                         throwOrMix.GetComponent<ContainerData>().count -= 1;
                     }
                     else if (closest.transform.GetComponent<ItemData>().drinkType3 == "_Empty_")
                     {
                         closest.transform.GetComponent<ItemData>().drinkType3 = content;
+                        throwOrMix.transform.GetChild(throwOrMix.GetComponent<ContainerData>().count).gameObject.SetActive(false);
                         throwOrMix.GetComponent<ContainerData>().count -= 1;
                     }
                     else { Debug.Log("Full"); }
@@ -222,23 +237,16 @@ public class PlayerController : MonoBehaviourPunCallbacks
                 }
             }
 
-            readyToThrow = true;
-            if (forceMulti > 10)
-            {
+            //thisGameObject.transform.position += transform.forward;
+            //thisGameObject.transform.position -= new Vector3(0, 1, 0);
+            closest.transform.GetComponent<Rigidbody>().useGravity = true;
+            closest.transform.GetComponent<BoxCollider>().enabled = true;
+            Holding = false;
 
-                //thisGameObject.transform.position += transform.forward;
-                //thisGameObject.transform.position -= new Vector3(0, 1, 0);
-                closest.transform.GetComponent<Rigidbody>().useGravity = true;
-                closest.transform.GetComponent<BoxCollider>().enabled = true;
-                readyToThrow = false;
-                Holding = false;
-                forceMulti = 0;
-
-                int ObjectRPCID = closest.GetComponent<PhotonView>().ViewID;
-                Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
-                Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
-                view.RPC("RPC_ValueChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, false, false, false);
-            }
+            int ObjectRPCID = closest.GetComponent<PhotonView>().ViewID;
+            Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
+            Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
+            view.RPC("RPC_ItemChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, false, false, false, closest.tag);
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && Holding == true && stallThrow == false && holdingArrow == true)
@@ -246,14 +254,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
             stallThrow = true;
             closest.transform.GetComponent<Rigidbody>().useGravity = true;
             closest.transform.GetComponent<BoxCollider>().enabled = true;
-            readyToThrow = false;
             Holding = false;
-            forceMulti = 0;
 
             int ObjectRPCID = closest.GetComponent<PhotonView>().ViewID;
             Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
             Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
-            view.RPC("RPC_ValueChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, false, true, false);
+            view.RPC("RPC_ItemChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, false, true, false, closest.tag);
         }
 
 
@@ -261,24 +267,18 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     }
 
-    private void OnCollisionEnter()
-    {
-        airbourne = false;
-    }
-    private void OnCollisionExit(Collision exitedObject)
-    {
-        airbourne = true;
-    }
 
     [PunRPC]
-    void RPC_ValueChanges(int objectRPC, Vector3 newPosition, Quaternion newRotation, bool phantom, bool Thrown, bool Holding)
+    void RPC_ItemChanges(int objectRPC, Vector3 newPosition, Quaternion newRotation, bool phantom, bool Thrown, bool Holding, string objectTag)
     {
         PhotonView ObjectSync = PhotonView.Find(objectRPC);
         ObjectSync.transform.position = newPosition;
         ObjectSync.transform.rotation = newRotation;
         ObjectSync.transform.GetComponent<Rigidbody>().useGravity = !phantom;
         ObjectSync.transform.GetComponent<Rigidbody>().isKinematic = phantom;
-        ObjectSync.transform.GetComponent<ItemData>().beingHeld = Holding;
+        if(objectTag == "Item")
+            ObjectSync.transform.GetComponent<ItemData>().beingHeld = Holding;
+
         if (phantom)
         {
             ObjectSync.GetComponent<Rigidbody>().velocity = Vector3.zero;
@@ -287,10 +287,11 @@ public class PlayerController : MonoBehaviourPunCallbacks
         if (Thrown)
             ObjectSync.transform.GetComponent<Rigidbody>().AddForce(transform.Find("Body").forward * 1000 * 2);
     }
-    
-    [PunRPC]
-    void RPC_ItemChanges()
-    {
 
+    [PunRPC]
+    void RPC_PlayerChanges(bool RPCkinematic)
+    {
+        transform.GetComponent<Rigidbody>().isKinematic = RPCkinematic;
+        
     }
 }
