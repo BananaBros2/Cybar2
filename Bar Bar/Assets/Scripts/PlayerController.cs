@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 using Photon.Pun;
 
 public class PlayerController : MonoBehaviourPunCallbacks
@@ -20,8 +20,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public bool holdingArrow;
 
     public bool occupied;
+
+    public Image progressBar;
+    public float progressFill;
+
     //  Photon   ------------------------
-    PhotonView view;
+    public PhotonView view;
 
     public GameObject glassObject;
 
@@ -51,13 +55,34 @@ public class PlayerController : MonoBehaviourPunCallbacks
         //Changes the properties of the physics material to stop the player from sticking to walls
         transform.GetChild(0).GetComponent<CapsuleCollider>().material.staticFriction = 0;
         transform.GetChild(0).GetComponent<CapsuleCollider>().material.dynamicFriction = 0;
+
+        progressBar = transform.GetChild(1).GetChild(1).GetComponent<Image>();
     }
 
     // Fixed Update Content =================================================================================================================================
     private void FixedUpdate()
     {
         // Checks if the current view is the owner of the game object, this avoids other players from duplicate running code in this game object.
-        if (!view.IsMine || occupied == true) { return; }
+        if (!view.IsMine) { return; }
+
+
+
+
+        //if (Input.GetKey(KeyCode.LeftShift) && Holding == true)
+        //{
+        //    occupied = true;
+        //    GetComponent<Rigidbody>().velocity = new Vector3(0, GetComponent<Rigidbody>().velocity.y - 0.5f, 0);
+        //    progressFill += Time.deltaTime;
+        //    progressBar.fillAmount = progressFill / 5;
+        //    if (progressBar.fillAmount >= 1) { print("SAAA"); }
+        //}
+        //else { occupied = false; }
+
+
+
+
+
+        if (occupied == true) { return; }
 
         float xTranslation = Input.GetAxis("HorizontalAim") * Time.deltaTime;
         float zTranslation = Input.GetAxis("VerticalAim") * Time.deltaTime;
@@ -84,6 +109,21 @@ public class PlayerController : MonoBehaviourPunCallbacks
     private void Update()
     {
         if (!view.IsMine ) { return; }
+
+
+        if (Holding)
+        {
+            closest.GetComponent<PhotonView>().transform.position = toFollow.position - offset;
+            closest.GetComponent<PhotonView>().transform.position = transform.position + Vector3.up * 1.5f;
+            closest.GetComponent<PhotonView>().transform.rotation = toFollow.rotation;
+
+            int ObjectRPCID = closest.GetComponent<PhotonView>().ViewID;
+            Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
+            Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
+            view.RPC("RPC_ItemChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, true, false, true, closest.tag);
+        }
+
+
         if (occupied == true) { return; }
         
         Transform GetClosestObject(Transform[] objects)
@@ -173,28 +213,15 @@ public class PlayerController : MonoBehaviourPunCallbacks
                 {
                     closest.transform.GetChild(1).gameObject.SetActive(true);
                     closest.GetComponent<Computer>().inUse = true;
-                    print("hello");
                     PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_PlayerChanges");
                     view.RPC("RPC_PlayerChanges", RpcTarget.AllBuffered, true);
+                    closest.GetComponent<Computer>().usedBy = this;
                     occupied = true;
 
                 }
 
             }
 
-        }
-
-
-        if (Holding)
-        {
-            closest.GetComponent<PhotonView>().transform.position = toFollow.position - offset;
-            closest.GetComponent<PhotonView>().transform.position = transform.position + Vector3.up * 1.5f;
-            closest.GetComponent<PhotonView>().transform.rotation = toFollow.rotation;
-
-            int ObjectRPCID = closest.GetComponent<PhotonView>().ViewID;
-            Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
-            Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
-            view.RPC("RPC_ItemChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, true, false, true, closest.tag);
         }
 
 
@@ -263,7 +290,13 @@ public class PlayerController : MonoBehaviourPunCallbacks
         }
 
 
-        
+
+
+
+
+
+
+
 
     }
 

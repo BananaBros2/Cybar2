@@ -35,7 +35,7 @@ RectTransform:
   - {fileID: 820473227727824085}
   - {fileID: 1343827323923369983}
   m_Father: {fileID: 6402839683396447400}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -477,7 +477,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6402839682598656579}
-  - {fileID: 6402839683587248518}
   - {fileID: 7222525046775544569}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -502,6 +501,9 @@ MonoBehaviour:
   stallThrow: 0
   holdingArrow: 0
   occupied: 0
+  progressBar: {fileID: 0}
+  progressFill: 0
+  view: {fileID: 0}
   glassObject: {fileID: 3431506533024254292, guid: 1671ca90b8c3eb543affafc4c32a6516, type: 3}
 --- !u!54 &6402839683396447402
 Rigidbody:
@@ -592,37 +594,6 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
---- !u!1 &6402839683587248517
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6402839683587248518}
-  m_Layer: 0
-  m_Name: PickUpPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6402839683587248518
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6402839683587248517}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5499997, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6402839683396447400}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8899562293899499361
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,11 +661,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -922789433, guid: c5bbaa5baa4f1b44aa70c2a7b3c62df0, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 0
-  m_FillAmount: 0.396
+  m_FillMethod: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
