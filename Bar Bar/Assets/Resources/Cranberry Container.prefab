@@ -205,12 +205,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414839144416977105}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ddc68344a68ee5a42bebd41aaed76ec6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.016842099, y: 0.004174015, z: 0.0168421}
-  m_Center: {x: 0, y: 0.0021, z: 0}
+  m_Size: {x: 0.016842099, y: 0.011, z: 0.0168421}
+  m_Center: {x: 0, y: 0.0055, z: 0}
 --- !u!54 &414839144416977116
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414839144416977105}
   serializedVersion: 2
-  m_Mass: 3
+  m_Mass: 5
   m_Drag: 1
   m_AngularDrag: 2
   m_UseGravity: 1
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 414839145239884978}
   - component: {fileID: 414839145239884976}
   - component: {fileID: 414839145239884977}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 414839145849448003}
   - component: {fileID: 414839145849448004}
   - component: {fileID: 414839145849448005}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1070,7 +1070,7 @@ GameObject:
   - component: {fileID: 414839145995929279}
   - component: {fileID: 414839145995929277}
   - component: {fileID: 414839145995929278}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

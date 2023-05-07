@@ -30,6 +30,21 @@ public class Computer : MonoBehaviour
     public List<bool> currentOrder;
     public bool ordered;
 
+    public Image progressBar;
+    public float progressFill;
+
+
+
+
+    public GameObject block;
+    int total;
+
+    public BoxCollider deliveryZone;
+    Vector3 size;
+
+
+
+
     void Start()
     {
         view = GetComponent<PhotonView>();
@@ -68,18 +83,74 @@ public class Computer : MonoBehaviour
 
         if (!inUse && ordered)
         {
+            progressBar.enabled = true;
 
-            for (int i = 0; i < currentOrder.Count; ++i)
+            progressFill += Time.deltaTime;
+            progressBar.fillAmount = progressFill / 6;
+            if (progressBar.fillAmount >= 1)
             {
-                if (currentOrder[i])
+                transform.GetChild(1).GetChild(1).GetChild(1).GetComponent<Button>().Select();
+                progressFill = 0;
+                ordered = false;
+
+
+                size = deliveryZone.size;
+
+                for (int y = 0; y < 250; ++y)
                 {
-                    GameObject instantiatedObject = PhotonNetwork.Instantiate(orderSlots[i].name, transform.position, Quaternion.identity);
-                    transform.GetChild(1).GetChild(i).GetChild(0).GetComponent<Image>().enabled = false;
-                    currentOrder[i] = false;
-                    GameObject.Find("StatsObject").GetComponent<GameStats>().levelScore -= 30;
+                    for (int x = 0; x < (size.x / 2); ++x)
+                    {
+                        for (int z = 0; z < (size.z / 2); ++z)
+                        {
+                            for (int i = 0; i < currentOrder.Count; ++i)
+                            {
+                                if (currentOrder[i])
+                                {
+                                    Vector3 boxSpawnArea = new Vector3(deliveryZone.transform.position.x + 1 + x * 2 - (size.x / 2), deliveryZone.transform.position.y - 2 + y * 0.8f, deliveryZone.transform.position.z + 1 + z * 2 - (size.z / 2));
+                                    int layerMask = (1 << LayerMask.NameToLayer("Items"));
+
+                                    if (Physics.CheckBox(boxSpawnArea, new Vector3(0.5f, 0.4f, 0.55f), Quaternion.Euler(0,0,0), layerMask)) { break; }
+
+                                    GameObject instantiatedObject = PhotonNetwork.Instantiate(orderSlots[i].name, boxSpawnArea, Quaternion.identity);
+
+                                    transform.GetChild(1).GetChild(i + 1).GetChild(0).GetComponent<Image>().enabled = false;
+                                    currentOrder[i] = false;
+                                    GameObject.Find("StatsObject").GetComponent<GameStats>().levelScore -= 30;
+                                    if (instantiatedObject.GetComponent<ContainerData>().contents == "Glass") { GameObject.Find("StatsObject").GetComponent<GameStats>().levelScore -= 20; }
+                                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().checkedItems.Add(instantiatedObject.transform);
+                                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().worldItems = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().checkedItems.ToArray();
+                                    total -= 1;
+                                    break;
+                                }
+                            }
+                            
+                            if (total == 0) { return; }
+                        }
+
+                    }
                 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             }
-            ordered = false;
+            
+
         }
 
     }
@@ -101,7 +172,8 @@ public class Computer : MonoBehaviour
         if(currentOrder[buttonID-1])
         {
             currentOrder[buttonID - 1] = false;
-            transform.GetChild(1).GetChild(buttonID - 1).GetChild(0).GetComponent<Image>().enabled = false;
+            total -= 1;
+            transform.GetChild(1).GetChild(buttonID).GetChild(0).GetComponent<Image>().enabled = false;
             for (int i = 0; i < currentOrder.Count; ++i)
             {
                 if (currentOrder[i] == true) { return; }
@@ -111,8 +183,9 @@ public class Computer : MonoBehaviour
         }
         else
         {
+            total += 1;
             currentOrder[buttonID - 1] = true;
-            transform.GetChild(1).GetChild(buttonID - 1).GetChild(0).GetComponent<Image>().enabled = true;
+            transform.GetChild(1).GetChild(buttonID).GetChild(0).GetComponent<Image>().enabled = true;
             ordered = true;
         }
         

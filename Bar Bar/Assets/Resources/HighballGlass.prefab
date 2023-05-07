@@ -124,6 +124,7 @@ MonoBehaviour:
   oldList: []
   beingHeld: 0
   view: {fileID: 0}
+  spill: {fileID: 5719938173593596228, guid: f6b62d4f6cfb5834a92440b064b6af66, type: 3}
 --- !u!54 &3431506533024254294
 Rigidbody:
   m_ObjectHideFlags: 0

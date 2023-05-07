@@ -33,6 +33,12 @@ public class ContainerData : MonoBehaviour
     
     private void Update()
     {
+        if(transform.GetComponent<Rigidbody>().velocity.magnitude <= 0.01f)
+        {
+            transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            transform.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        }
+
         // Sets the fillAmount to the capacity of the container by dividing the current count by the capacity
         image.fillAmount = (float)count / (float)capacity;
 

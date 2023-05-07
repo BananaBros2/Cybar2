@@ -18,9 +18,9 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         gameTime += Time.deltaTime;
 
-        
         if (gameTime > 275) { textString.text = "1AM"; }
         else if (gameTime > 250) { textString.text = "12AM"; }
         else if (gameTime > 225) { textString.text = "11PM"; }

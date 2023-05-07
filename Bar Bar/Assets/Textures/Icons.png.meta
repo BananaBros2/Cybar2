@@ -460,6 +460,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ING HighballGlass
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e63a29277fd9a40a309456a157cda1
+      internalID: 1004566368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -473,6 +494,7 @@ TextureImporter:
     nameFileIdTable:
       5 Madras: 1243729016
       4 Sea Breeze: -1050836189
+      ING HighballGlass: 1004566368
       0 Null: -426566555
       3a Cape Codder: -864166145
       0 Blank: 257071632

@@ -30,6 +30,9 @@ public class ItemData : MonoBehaviour
 
     public PhotonView view;
     bool skip = true;
+
+    public GameObject spill;
+
     private void Start()
     {
         view = GetComponent<PhotonView>();
@@ -123,4 +126,21 @@ public class ItemData : MonoBehaviour
         finalColour = new Color(RPCred, RPCgreen, RPCblue);
         beingHeld = RPCheld;
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.relativeVelocity.magnitude > 8) 
+        {
+            RaycastHit hit;
+
+            if(Physics.Raycast(transform.position, Vector3.down, out hit, 20))
+            {
+                GameObject instantiatedObject = PhotonNetwork.Instantiate(spill.name, hit.point, Quaternion.identity);
+            }
+            
+        }
+
+        //print(collision.relativeVelocity.magnitude);
+    }
+
 }

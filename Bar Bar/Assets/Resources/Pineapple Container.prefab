@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 15489743728896416}
   - component: {fileID: 15489743728896418}
   - component: {fileID: 15489743728896417}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 15489744027614140}
   - component: {fileID: 15489744027614131}
   - component: {fileID: 15489744027614130}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 15489744680273348}
   - component: {fileID: 15489744680273350}
   - component: {fileID: 15489744680273349}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,8 +712,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.016842099, y: 0.004174015, z: 0.0168421}
-  m_Center: {x: 0, y: 0.0021, z: 0}
+  m_Size: {x: 0.016842099, y: 0.011, z: 0.0168421}
+  m_Center: {x: 0, y: 0.0055, z: 0}
 --- !u!54 &15489744944377084
 Rigidbody:
   m_ObjectHideFlags: 0

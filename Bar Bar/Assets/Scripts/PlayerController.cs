@@ -147,9 +147,9 @@ public class PlayerController : MonoBehaviourPunCallbacks
                 }
                 if (potentialTarget.tag == "Container")
                 {
-                    if (dSqrToTarget + 0.5f < closestDistanceSqr && potentialTarget.GetComponent<ContainerData>().count > 0)
+                    if (dSqrToTarget + 0.75f < closestDistanceSqr && potentialTarget.GetComponent<ContainerData>().count > 0)
                     {
-                        closestDistanceSqr = dSqrToTarget + 0.5f;
+                        closestDistanceSqr = dSqrToTarget + 0.75f;
                         bestTarget = potentialTarget;
                     }
                 }
@@ -174,11 +174,11 @@ public class PlayerController : MonoBehaviourPunCallbacks
             closest = GetClosestObject(worldItems).transform.gameObject;
             pickupDistance = Vector3.Distance(closest.transform.position, transform.position);
 
-            if (pickupDistance < 2.5f && Holding == false)
+            if (pickupDistance < 3f && Holding == false)
             {
                 if (closest.tag == "Container")
                 {
-                    if (closest.GetComponent<ContainerData>().contents == "Glass" && closest.GetComponent<ContainerData>().count > 0)
+                    if (closest.GetComponent<ContainerData>().contents == "Glass" && closest.GetComponent<ContainerData>().count > 0 && !Input.GetKey(KeyCode.LeftShift))
                     {
                         closest.transform.GetChild(closest.GetComponent<ContainerData>().count).gameObject.SetActive(false);
                         closest.GetComponent<ContainerData>().count -= 1;
