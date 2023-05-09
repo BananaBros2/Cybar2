@@ -53,6 +53,12 @@ MonoBehaviour:
   - RPC_ValueChanges
   - RPC_ItemChanges
   - RPC_PlayerChanges
+  - RPC_Delete
+  - RPC_Spill
+  - RPC_UpdateLists
+  - RPC_InstantiateGlass
+  - RPC_SpillInstantiate
+  - RPC_GlassFollowUp
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

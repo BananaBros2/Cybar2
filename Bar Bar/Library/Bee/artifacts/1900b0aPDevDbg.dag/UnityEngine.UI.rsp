@@ -316,6 +316,8 @@
 -r:"C:/Users/Vince/Documents/Custom Games/Unity/Cybar2/Bar Bar/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll"
 -r:"C:/Users/Vince/Documents/Custom Games/Unity/Cybar2/Bar Bar/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.Unsafe.dll"
 -r:"C:/Users/Vince/Documents/Custom Games/Unity/Cybar2/Bar Bar/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/AOT/Newtonsoft.Json.dll"
+"Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Editor/ShaderGUI/MaterialAssemblyReference/RawRenderQueue.cs"
+"Library/PackageCache/com.unity.shadergraph@12.1.7/Editor/Generation/Targets/BuiltIn/Editor/ShaderGUI/MaterialAssemblyReference/RawRenderQueue.cs"
 "Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/AxisEventData.cs"
 "Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/BaseEventData.cs"
 "Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs"

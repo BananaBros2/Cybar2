@@ -4,13 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Floor
   - Item
   - Table
   - Keg
   - Container
   - Customer
   - Computer
+  - Floor
+  - Spillage
+  - Mop
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Items
   - People
   - Invisible Walls
-  - 
+  - Floor
   - 
   - 
   - 

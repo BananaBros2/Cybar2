@@ -103,7 +103,7 @@ public class TableOrder : MonoBehaviour
         orderRecieved = RPCrecieved;
         if (desiredDrink != -2)
         {
-            transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = drinkImages[desiredDrink];
+            transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = drinkImages[desiredDrink];
         }
     }
 

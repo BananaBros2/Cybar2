@@ -5,6 +5,9 @@ using UnityEngine;
 using System.Linq;
 using Photon.Pun;
 
+using UnityEngine.Rendering.Universal;
+
+[RequireComponent(typeof(DecalProjector))]
 public class ItemData : MonoBehaviour
 {
     public int drinkID;
@@ -80,7 +83,7 @@ public class ItemData : MonoBehaviour
             if (flavour == "_Empty_") { return blank; }
 
             if (flavour == "Vodka") { return vodka; }
-            else if(flavour == "Orange") { return orange; }
+            else if (flavour == "Orange") { return orange; }
             else if (flavour == "Cranberry") { return cranberry; }
             else if (flavour == "Grapefruit") { return grapefruit; }
             else if (flavour == "Pineapple") { return pineapple; }
@@ -91,7 +94,7 @@ public class ItemData : MonoBehaviour
         Color colour1 = GetColor(drinkType1);
         Color colour2 = GetColor(drinkType2);
         Color colour3 = GetColor(drinkType3);
-        if(colour1 == blank)
+        if (colour1 == blank)
         {
             finalColour = new Color(0.85f, 0.85f, 0.85f);
             //print("1");
@@ -129,18 +132,66 @@ public class ItemData : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.relativeVelocity.magnitude > 8) 
+        // Activates if the glass collides with another object at a magnitude of more than 8
+        // Throwing a glass will normally result in it breaking, but just dropping it normally won't
+        if (collision.relativeVelocity.magnitude > 8)
         {
-            RaycastHit hit;
-
-            if(Physics.Raycast(transform.position, Vector3.down, out hit, 20))
+            // Checks if the Glass has any contents before spawning a puddle
+            if (!ingredientsList.SequenceEqual(new List<string> { "_Empty_", "_Empty_", "_Empty_" }))
             {
-                GameObject instantiatedObject = PhotonNetwork.Instantiate(spill.name, hit.point, Quaternion.identity);
+                // Projects a ray downwards 20 units that will only return true if colliding with a object in the 'Floor' layer
+                if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 20, (1 << LayerMask.NameToLayer("Floor"))))
+                {
+
+                    // Creates the puddle prefab at the location of where the raycast hit.
+                    view.RPC("RPC_SpillInstantiate", RpcTarget.MasterClient, hit.point);
+
+
+                }
             }
+
+            view.RPC("RPC_UpdateLists", RpcTarget.All);
+            view.RPC("RPC_Delete", RpcTarget.MasterClient);
+
             
         }
+    }
 
-        //print(collision.relativeVelocity.magnitude);
+    [PunRPC]
+    void RPC_SpillInstantiate(Vector3 RPCPosition)
+    {
+        GameObject instantiatedObject = PhotonNetwork.Instantiate(spill.name, RPCPosition, Quaternion.identity);
+        view.RPC("RPC_Spill", RpcTarget.All, instantiatedObject.GetPhotonView().ViewID);
+    }
+
+    [PunRPC]
+    void RPC_Spill(int RPCID)
+    {
+        var decalProjector = PhotonView.Find(RPCID).transform.GetChild(0).GetComponent<DecalProjector>();
+
+        // Creates a new material that copies the old's properties
+        // Using the old one would result in all puddles copying any tweaks done in script
+        decalProjector.material = Instantiate<Material>(decalProjector.material);
+
+        // Uses a custom made color decal property to mix the image with the current colour of the glass contents
+        decalProjector.material.color = (finalColour);
+    }
+
+    [PunRPC]
+    void RPC_UpdateLists()
+    {
+        // Runs the following code per every object tagged as a player
+        foreach (GameObject players in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            players.GetComponent<PlayerController>().checkedItems.Remove(this.transform);
+            players.GetComponent<PlayerController>().worldItems = players.GetComponent<PlayerController>().checkedItems.ToArray();
+        }
+    }
+
+        [PunRPC]
+    void RPC_Delete()
+    {
+        PhotonNetwork.Destroy(this.gameObject);
     }
 
 }

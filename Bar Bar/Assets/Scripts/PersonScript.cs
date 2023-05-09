@@ -61,7 +61,7 @@ public class PersonScript : MonoBehaviour
         {
             if (collidedObject.transform.tag == "Finish")
             {
-                Destroy(gameObject);
+                PhotonNetwork.Destroy(gameObject);
                 return;
             }
 

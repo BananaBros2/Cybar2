@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using Photon.Realtime;
 
 public class PlayerController : MonoBehaviourPunCallbacks
 {
+
+
+    bool slippery;
+    GameObject closestPuddle;
+
     // object Interaction -------------------------
     public float pickupDistance;
     public Transform toFollow;
@@ -51,6 +57,11 @@ public class PlayerController : MonoBehaviourPunCallbacks
             checkedItems.Add(go.GetComponent<Transform>());
             worldItems = checkedItems.ToArray();
         }
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Mop"))
+        {
+            checkedItems.Add(go.GetComponent<Transform>());
+            worldItems = checkedItems.ToArray();
+        }
 
         //Changes the properties of the physics material to stop the player from sticking to walls
         transform.GetChild(0).GetComponent<CapsuleCollider>().material.staticFriction = 0;
@@ -79,7 +90,24 @@ public class PlayerController : MonoBehaviourPunCallbacks
         //else { occupied = false; }
 
 
+        if (closest == null) { }
+        else if (slippery && Input.GetKey(KeyCode.LeftShift) && closest.tag == "Mop")
+        {
+            progressFill += Time.deltaTime;
+            progressBar.fillAmount = progressFill / 5;
+            if (progressBar.fillAmount >= 1)
+            {
+                view.RPC("RPC_Delete", RpcTarget.MasterClient, closestPuddle.GetPhotonView().ViewID);
 
+                progressFill = 0;
+                progressBar.fillAmount = 0;
+            }
+        }
+        else
+        {
+            progressFill = 0;
+            progressBar.fillAmount = 0;
+        }
 
 
         if (occupied == true) { return; }
@@ -101,8 +129,25 @@ public class PlayerController : MonoBehaviourPunCallbacks
             view.transform.GetChild(0).transform.rotation = Quaternion.RotateTowards(transform.GetChild(0).transform.rotation, Quaternion.Euler(Vector3.up * Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg), 1000 * Time.deltaTime);
         }
 
-        var normalizedVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        GetComponent<Rigidbody>().velocity = new Vector3(normalizedVector.x * Time.deltaTime * 500, GetComponent<Rigidbody>().velocity.y - 0.5f, normalizedVector.y * Time.deltaTime * 500);
+
+        if (slippery)
+        {
+            GetComponent<Rigidbody>().AddForce(new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized * 400, ForceMode.Force);
+            Vector3 flatVel = new Vector3(GetComponent<Rigidbody>().velocity.x, 0f, GetComponent<Rigidbody>().velocity.z);
+
+            if(flatVel.magnitude > 10)
+            {
+                Vector3 limitedVel = flatVel.normalized * 10;
+                GetComponent<Rigidbody>().velocity = new Vector3(limitedVel.x, GetComponent<Rigidbody>().velocity.y, limitedVel.z);
+            }
+
+            slippery = false;
+        }
+        else
+        {
+            var normalizedVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+            GetComponent<Rigidbody>().velocity = new Vector3(normalizedVector.x * Time.deltaTime * 500, GetComponent<Rigidbody>().velocity.y - 0.5f, normalizedVector.y * Time.deltaTime * 500);
+        }
 
     }
 
@@ -161,6 +206,15 @@ public class PlayerController : MonoBehaviourPunCallbacks
                         bestTarget = potentialTarget;
                     }
                 }
+                if (potentialTarget.tag == "Mop")
+                {
+                    if (dSqrToTarget + 0.75f < closestDistanceSqr && potentialTarget.GetComponent<MopData>().beingHeld == false)
+                    {
+                        closestDistanceSqr = dSqrToTarget + 0.5f;
+                        bestTarget = potentialTarget;
+                    }
+                }
+
             }
 
             return bestTarget;
@@ -180,17 +234,29 @@ public class PlayerController : MonoBehaviourPunCallbacks
                 {
                     if (closest.GetComponent<ContainerData>().contents == "Glass" && closest.GetComponent<ContainerData>().count > 0 && !Input.GetKey(KeyCode.LeftShift))
                     {
-                        closest.transform.GetChild(closest.GetComponent<ContainerData>().count).gameObject.SetActive(false);
-                        closest.GetComponent<ContainerData>().count -= 1;
-                        closest = PhotonNetwork.Instantiate(glassObject.name, transform.position, Quaternion.identity);
-                        checkedItems.Add(closest.transform);
-                        worldItems = checkedItems.ToArray();
-                        Holding = true;
+                        if (!PhotonNetwork.IsMasterClient)
+                        {
+
+
+                            closest.transform.GetChild(closest.GetComponent<ContainerData>().count).gameObject.SetActive(false);
+                            closest.GetComponent<ContainerData>().count -= 1;
+                            view.RPC("RPC_InstantiateGlass", RpcTarget.MasterClient, transform.GetComponent<PhotonView>().Controller, transform.position);
+                            closest = null;
+                            return;
+                        }
+                        else
+                        {
+                            closest.transform.GetChild(closest.GetComponent<ContainerData>().count).gameObject.SetActive(false);
+                            closest.GetComponent<ContainerData>().count -= 1;
+                            closest = PhotonNetwork.Instantiate(glassObject.name, transform.position, Quaternion.identity);
+                            Holding = true;
+                            view.RPC("RPC_UpdateLists", RpcTarget.All, closest.GetPhotonView().ViewID);
+                        }
                     }
                     
                 }
                
-                if (closest.tag == "Item" || closest.tag == "Container")
+                if (closest.tag == "Item" || closest.tag == "Container" || closest.tag == "Mop")
                 {
                     toFollow = transform.Find("Body");
 
@@ -266,6 +332,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
             //thisGameObject.transform.position += transform.forward;
             //thisGameObject.transform.position -= new Vector3(0, 1, 0);
+
             closest.transform.GetComponent<Rigidbody>().useGravity = true;
             closest.transform.GetComponent<BoxCollider>().enabled = true;
             Holding = false;
@@ -274,6 +341,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
             Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
             view.RPC("RPC_ItemChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, false, false, false, closest.tag);
+            //closest = null;
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && Holding == true && stallThrow == false && holdingArrow == true)
@@ -287,17 +355,44 @@ public class PlayerController : MonoBehaviourPunCallbacks
             Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
             Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
             view.RPC("RPC_ItemChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, false, true, false, closest.tag);
+            //closest = null;
         }
 
+    }
 
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Spillage") { slippery = true; closestPuddle = other.gameObject; }
+        
+    }
 
+    [PunRPC]
+    void RPC_InstantiateGlass(Player RPCSentBy, Vector3 RPCTransform)
+    {
+        GameObject Glass = PhotonNetwork.Instantiate(glassObject.name, RPCTransform, Quaternion.identity);
+        Glass.transform.GetComponent<PhotonView>();
+        view.RPC("RPC_GlassFollowUp", RPCSentBy, Glass.GetPhotonView().ViewID);
+        view.RPC("RPC_UpdateLists", RpcTarget.All, Glass.GetPhotonView().ViewID);
+    }
+    [PunRPC]
+    void RPC_GlassFollowUp(int RPCGlass)
+    {
+        transform.GetComponent<PhotonView>();
+        closest = PhotonView.Find(RPCGlass).gameObject;
+        Holding = true;
+        toFollow = transform.Find("Body");
+    }
 
-
-
-
-
-
+    [PunRPC]
+    void RPC_UpdateLists(int RPCGlass)
+    {
+        // Runs the following code per every object tagged as a player
+        foreach (GameObject players in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            players.GetComponent<PlayerController>().checkedItems.Remove(PhotonView.Find(RPCGlass).transform);
+            players.GetComponent<PlayerController>().worldItems = players.GetComponent<PlayerController>().checkedItems.ToArray();
+        }
     }
 
 
@@ -327,4 +422,14 @@ public class PlayerController : MonoBehaviourPunCallbacks
         transform.GetComponent<Rigidbody>().isKinematic = RPCkinematic;
         
     }
+
+    [PunRPC]
+    void RPC_Delete(int RPCID)
+    {
+
+        PhotonNetwork.Destroy(PhotonView.Find(RPCID).gameObject);
+
+    }
+
+
 }
