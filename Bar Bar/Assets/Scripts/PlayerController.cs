@@ -330,18 +330,18 @@ public class PlayerController : MonoBehaviourPunCallbacks
                 }
             }
 
-            //thisGameObject.transform.position += transform.forward;
-            //thisGameObject.transform.position -= new Vector3(0, 1, 0);
+
 
             closest.transform.GetComponent<Rigidbody>().useGravity = true;
             closest.transform.GetComponent<BoxCollider>().enabled = true;
             Holding = false;
-
+            //closest.transform.position += transform.GetChild(0).transform.position*0.1f;
+            //thisGameObject.transform.position -= new Vector3(0, 1, 0);
             int ObjectRPCID = closest.GetComponent<PhotonView>().ViewID;
             Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
             Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
             view.RPC("RPC_ItemChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, false, false, false, closest.tag);
-            //closest = null;
+            closest = null;
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && Holding == true && stallThrow == false && holdingArrow == true)
@@ -355,7 +355,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
             Vector3 newRPCPosition = closest.GetComponent<PhotonView>().transform.position;
             Quaternion newRPCRotation = closest.GetComponent<PhotonView>().transform.rotation;
             view.RPC("RPC_ItemChanges", RpcTarget.All, ObjectRPCID, newRPCPosition, newRPCRotation, false, true, false, closest.tag);
-            //closest = null;
+            closest = null;
         }
 
     }
@@ -390,7 +390,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         // Runs the following code per every object tagged as a player
         foreach (GameObject players in GameObject.FindGameObjectsWithTag("Player"))
         {
-            players.GetComponent<PlayerController>().checkedItems.Remove(PhotonView.Find(RPCGlass).transform);
+            players.GetComponent<PlayerController>().checkedItems.Add(PhotonView.Find(RPCGlass).transform);
             players.GetComponent<PlayerController>().worldItems = players.GetComponent<PlayerController>().checkedItems.ToArray();
         }
     }

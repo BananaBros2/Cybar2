@@ -20,6 +20,7 @@ public class TriggerEnter : MonoBehaviour
                 other.gameObject.GetComponent<ItemData>().drinkType1 = "_Empty_";
                 other.gameObject.GetComponent<ItemData>().drinkType2 = "_Empty_";
                 other.gameObject.GetComponent<ItemData>().drinkType3 = "_Empty_";
+                other.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
             }
 
         }

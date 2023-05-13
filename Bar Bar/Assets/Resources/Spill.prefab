@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 5719938173593596226}
   - component: {fileID: 8180381733706076532}
   - component: {fileID: 4590152052891995766}
+  - component: {fileID: 8027633324286837409}
   m_Layer: 0
   m_Name: Spill
   m_TagString: Spillage
@@ -159,6 +160,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d65ded1a34fa440805ef5096b80627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spillImages:
+  - {fileID: 2800000, guid: 971c6ec5e6dbf6d4598cd919de5305e2, type: 3}
+  - {fileID: 2800000, guid: 9fdf3b96d4a910c4a89e21a8ff26c15e, type: 3}
+  - {fileID: 2800000, guid: ea9ee93425c965044a6421d7fe94e479, type: 3}
+  - {fileID: 2800000, guid: 36f17a3b17fbd1c4293be5cab88fb7b1, type: 3}
+  - {fileID: 2800000, guid: 330ed7f09bd309845926f9671593cb52, type: 3}
 --- !u!54 &8180381733706076532
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -197,3 +204,26 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &8027633324286837409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719938173593596228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 31d0dcc6f2dd4e4408d18036a2c93862, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 0.5}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_FadeFactor: 0

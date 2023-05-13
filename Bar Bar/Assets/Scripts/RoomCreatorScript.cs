@@ -32,6 +32,6 @@ public class RoomCreatorScript : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("SampleScene");
+        PhotonNetwork.LoadLevel("Hub Area");
     }
 }
