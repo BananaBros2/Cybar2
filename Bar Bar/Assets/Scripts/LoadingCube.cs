@@ -22,6 +22,6 @@ public class LoadingCube : MonoBehaviour
     void Update()
     {
 
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 0.5f * spinDirection, transform.rotation.eulerAngles.z);
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 0.75f * spinDirection, transform.rotation.eulerAngles.z);
     }
 }

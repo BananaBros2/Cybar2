@@ -415,6 +415,7 @@
 "Assets/Scripts/Timer.cs"
 "Assets/Scripts/TriggerEnter.cs"
 "Assets/Scripts/WindUpPath.cs"
+"Assets/TextureScroll.cs"
 -langversion:9.0
 
 /deterministic
