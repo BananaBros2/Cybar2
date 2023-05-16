@@ -13,6 +13,7 @@ public class RoomCreatorScript : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.JoinLobby();
     }
 

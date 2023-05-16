@@ -187,11 +187,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
                 if (potentialTarget.tag == "Item")
                 {
-                    if (dSqrToTarget < closestDistanceSqr && potentialTarget.GetComponent<ItemData>().beingHeld == false)
+                    if (dSqrToTarget < closestDistanceSqr && potentialTarget.GetComponent<ItemData>().beingHeld == false && !Holding)
                     {
                         closestDistanceSqr = dSqrToTarget;
                         bestTarget = potentialTarget;
                     }
+
                 }
                 if (potentialTarget.tag == "Container")
                 {
@@ -280,12 +281,16 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
                 if (closest.tag == "Computer")
                 {
-                    closest.transform.GetChild(1).gameObject.SetActive(true);
-                    closest.GetComponent<Computer>().inUse = true;
-                    PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_PlayerChanges");
-                    view.RPC("RPC_PlayerChanges", RpcTarget.AllBuffered, true);
-                    closest.GetComponent<Computer>().usedBy = this;
-                    occupied = true;
+                    if(!closest.GetComponent<Computer>().inUse && !closest.GetComponent<Computer>().ordered)
+                    {
+                        closest.transform.GetChild(1).gameObject.SetActive(true);
+                        closest.GetComponent<Computer>().inUse = true;
+                        PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_PlayerChanges");
+                        view.RPC("RPC_PlayerChanges", RpcTarget.AllBuffered, true);
+                        closest.GetComponent<Computer>().usedBy = this;
+                        occupied = true;
+                    }
+
 
                 }
 

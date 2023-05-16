@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    void Resume()
+    public void Resume()
     {
         pauseMenu.SetActive(false);
         gamePaused = false;
@@ -42,24 +43,36 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 0;
     }
 
+    public void Restart()
+    {
+        Time.timeScale = 1;
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        PhotonNetwork.LoadLevel(currentSceneName);
+    }
+
     public void Settings()
     {
 
     }
 
-    public void Lobby()
+    public void BackHUB()
     {
-
+        Time.timeScale = 1;
+        PhotonNetwork.LoadLevel("HUB Area");
     }
 
     public void MainMenu()
     {
-
+        Time.timeScale = 1;
+        PhotonNetwork.Disconnect();
+        PhotonNetwork.LoadLevel("MainMenu");
+        
     }
 
     public void QuitButton()
     {
-
+        PhotonNetwork.Disconnect();
+        Application.Quit();
     }
 
 

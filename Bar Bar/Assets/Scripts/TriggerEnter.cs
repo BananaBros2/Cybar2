@@ -6,7 +6,7 @@ public class TriggerEnter : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer.ToString() == "7")
+        if (other.gameObject.layer.ToString() == "7" && other.tag == "Item")
         {
             if (other.gameObject.GetComponent<ItemData>().drinkID == transform.parent.gameObject.GetComponent<TableOrder>().desiredDrink)
             {

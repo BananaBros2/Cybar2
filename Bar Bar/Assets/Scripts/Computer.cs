@@ -28,8 +28,9 @@ public class Computer : MonoBehaviour
 
     public List<GameObject> orderSlots;
     public List<bool> currentOrder;
-    public bool ordered;
+    public bool ordered = false;
 
+    public Image progressBarHold;
     public Image progressBar;
     public float progressFill;
 
@@ -71,19 +72,20 @@ public class Computer : MonoBehaviour
         {
             coolDown -= 1;
             PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
-            view.RPC("RPC_ValueChanges", RpcTarget.AllBuffered, inUse);
+            view.RPC("RPC_ValueChanges", RpcTarget.AllBuffered, inUse, ordered);
         }
 
         
         if (coolDown == 0)
         {
             PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
-            view.RPC("RPC_ValueChanges", RpcTarget.AllBuffered, false);
+            view.RPC("RPC_ValueChanges", RpcTarget.AllBuffered, false, ordered);
         }
 
         if (!inUse && ordered)
         {
-            progressBar.enabled = true;
+            progressBarHold.gameObject.SetActive(true);
+            progressBar.gameObject.SetActive(true);
 
             progressFill += Time.deltaTime;
             progressBar.fillAmount = progressFill / 6;
@@ -93,6 +95,8 @@ public class Computer : MonoBehaviour
                 progressFill = 0;
                 ordered = false;
 
+                progressBarHold.gameObject.SetActive(false);
+                progressBar.gameObject.SetActive(false);
 
                 size = deliveryZone.size;
 
@@ -129,23 +133,6 @@ public class Computer : MonoBehaviour
 
                     }
                 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             }
@@ -192,8 +179,9 @@ public class Computer : MonoBehaviour
     }
 
     [PunRPC]
-    void RPC_ValueChanges(bool RPCinUse)
+    void RPC_ValueChanges(bool RPCinUse, bool RPCordered)
     {
         inUse = RPCinUse;
+        ordered = RPCordered;
     }
 }

@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
 using UnityEngine.Rendering.Universal;
-
-
 using UnityEditor;
 
 public class Timer : MonoBehaviour
 {
-    float gameTime = 0;
+    public float gameTime = 0;
     TextMeshProUGUI textString;
     public Light light;
 
@@ -19,7 +16,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textString = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        textString = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
         roomLights.SetActive(false);
     }
 
@@ -29,8 +26,8 @@ public class Timer : MonoBehaviour
 
         gameTime += Time.deltaTime;
 
-        if (gameTime > 240) { textString.text = "FINISH"; }
-        if (gameTime > 220) { textString.text = "1AM"; }
+        if (gameTime > 240) { textString.text = "END"; }
+        else if (gameTime > 220) { textString.text = "1AM"; }
         else if (gameTime > 200) { textString.text = "12AM"; }
         else if (gameTime > 180) { textString.text = "11PM"; }
         else if (gameTime > 160) { textString.text = "10PM"; }

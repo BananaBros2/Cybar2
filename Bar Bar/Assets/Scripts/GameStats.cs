@@ -16,7 +16,7 @@ public class GameStats : MonoBehaviour
 
     void Start()
     {
-        scoreText = canvas.transform.GetChild(1).gameObject;
+        scoreText = canvas.transform.GetChild(2).gameObject;
         oldScore = levelScore;
 
         view = GetComponent<PhotonView>();
