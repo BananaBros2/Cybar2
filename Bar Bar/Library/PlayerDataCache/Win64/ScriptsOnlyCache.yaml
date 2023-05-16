@@ -16,6 +16,7 @@ ScriptsOnlyBuild:
     - ServerConnectionScript
     - SpillScript
     - TableOrder
+    - TextureScroll
     - Timer
     - TriggerEnter
     - WindUpPath
@@ -86,7 +87,9 @@ ScriptsOnlyBuild:
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.ShaderGraph.Editor.dll:
+    - UnityEditor.Graphing.GraphObject
     - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
+    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
     - UnityEditor.ShaderGraph.SubGraphAsset
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
@@ -251,7 +254,267 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Computer
     methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
+  - assembly: Assembly-CSharp
+    fullTypeName: Computer
+    methodName: UIClick
   sceneClasses:
+    Assets/Scenes/Area 1/1-3.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1748}
+    - Class: 114
+      Script: {instanceID: 1750}
+    - Class: 114
+      Script: {instanceID: 2120}
+    - Class: 114
+      Script: {instanceID: 2198}
+    - Class: 114
+      Script: {instanceID: 2240}
+    - Class: 114
+      Script: {instanceID: 2670}
+    - Class: 114
+      Script: {instanceID: 2676}
+    - Class: 114
+      Script: {instanceID: 2872}
+    - Class: 114
+      Script: {instanceID: 3000}
+    - Class: 114
+      Script: {instanceID: 3018}
+    - Class: 114
+      Script: {instanceID: 3388}
+    - Class: 114
+      Script: {instanceID: 3470}
+    - Class: 114
+      Script: {instanceID: 3576}
+    - Class: 114
+      Script: {instanceID: 3656}
+    - Class: 114
+      Script: {instanceID: 4048}
+    - Class: 114
+      Script: {instanceID: 4496}
+    - Class: 114
+      Script: {instanceID: 5942}
+    - Class: 114
+      Script: {instanceID: 5950}
+    - Class: 114
+      Script: {instanceID: 6646}
+    - Class: 114
+      Script: {instanceID: 6684}
+    - Class: 114
+      Script: {instanceID: 6766}
+    - Class: 114
+      Script: {instanceID: 6848}
+    - Class: 114
+      Script: {instanceID: 7238}
+    - Class: 114
+      Script: {instanceID: 8210}
+    - Class: 114
+      Script: {instanceID: 8396}
+    - Class: 114
+      Script: {instanceID: 8466}
+    - Class: 114
+      Script: {instanceID: 8480}
+    - Class: 114
+      Script: {instanceID: 9006}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 134
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 208
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 238
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    Assets/Scenes/HUB Area.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1748}
+    - Class: 114
+      Script: {instanceID: 1750}
+    - Class: 114
+      Script: {instanceID: 2120}
+    - Class: 114
+      Script: {instanceID: 2676}
+    - Class: 114
+      Script: {instanceID: 3000}
+    - Class: 114
+      Script: {instanceID: 3018}
+    - Class: 114
+      Script: {instanceID: 3388}
+    - Class: 114
+      Script: {instanceID: 3470}
+    - Class: 114
+      Script: {instanceID: 3576}
+    - Class: 114
+      Script: {instanceID: 3656}
+    - Class: 114
+      Script: {instanceID: 4048}
+    - Class: 114
+      Script: {instanceID: 5942}
+    - Class: 114
+      Script: {instanceID: 6684}
+    - Class: 114
+      Script: {instanceID: 6766}
+    - Class: 114
+      Script: {instanceID: 7238}
+    - Class: 114
+      Script: {instanceID: 8210}
+    - Class: 114
+      Script: {instanceID: 8396}
+    - Class: 114
+      Script: {instanceID: 8466}
+    - Class: 114
+      Script: {instanceID: 8480}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 134
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 208
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/Loading Screen.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -274,6 +537,8 @@ ScriptsOnlyBuild:
     - Class: 49
       Script: {instanceID: 0}
     - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
@@ -325,6 +590,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2744}
     - Class: 114
       Script: {instanceID: 2872}
+    - Class: 114
+      Script: {instanceID: 3000}
     - Class: 114
       Script: {instanceID: 3018}
     - Class: 114
@@ -396,51 +663,57 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6840}
     - Class: 114
+      Script: {instanceID: 6848}
+    - Class: 114
       Script: {instanceID: 6934}
     - Class: 114
       Script: {instanceID: 6942}
     - Class: 114
-      Script: {instanceID: 7066}
+      Script: {instanceID: 6952}
     - Class: 114
-      Script: {instanceID: 7104}
+      Script: {instanceID: 7068}
     - Class: 114
-      Script: {instanceID: 7160}
+      Script: {instanceID: 7106}
     - Class: 114
-      Script: {instanceID: 7250}
+      Script: {instanceID: 7162}
+    - Class: 114
+      Script: {instanceID: 7238}
     - Class: 114
       Script: {instanceID: 7252}
     - Class: 114
-      Script: {instanceID: 7374}
+      Script: {instanceID: 7254}
     - Class: 114
-      Script: {instanceID: 7512}
+      Script: {instanceID: 7376}
     - Class: 114
-      Script: {instanceID: 7662}
+      Script: {instanceID: 7514}
     - Class: 114
-      Script: {instanceID: 7906}
+      Script: {instanceID: 7664}
     - Class: 114
-      Script: {instanceID: 8014}
+      Script: {instanceID: 7908}
     - Class: 114
-      Script: {instanceID: 8076}
+      Script: {instanceID: 8016}
     - Class: 114
-      Script: {instanceID: 8208}
+      Script: {instanceID: 8078}
     - Class: 114
-      Script: {instanceID: 8394}
+      Script: {instanceID: 8210}
     - Class: 114
-      Script: {instanceID: 8464}
+      Script: {instanceID: 8396}
     - Class: 114
       Script: {instanceID: 8466}
     - Class: 114
-      Script: {instanceID: 8478}
+      Script: {instanceID: 8468}
     - Class: 114
-      Script: {instanceID: 8836}
+      Script: {instanceID: 8480}
     - Class: 114
-      Script: {instanceID: 8926}
+      Script: {instanceID: 8838}
     - Class: 114
-      Script: {instanceID: 9068}
+      Script: {instanceID: 8928}
     - Class: 114
-      Script: {instanceID: 9140}
+      Script: {instanceID: 9070}
     - Class: 114
-      Script: {instanceID: 9402}
+      Script: {instanceID: 9142}
+    - Class: 114
+      Script: {instanceID: 9404}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -511,6 +784,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3576}
     - Class: 114
+      Script: {instanceID: 3656}
+    - Class: 114
       Script: {instanceID: 4702}
     - Class: 114
       Script: {instanceID: 5682}
@@ -521,7 +796,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6848}
     - Class: 114
-      Script: {instanceID: 7236}
+      Script: {instanceID: 7238}
+    - Class: 114
+      Script: {instanceID: 8396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -618,21 +895,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6848}
     - Class: 114
-      Script: {instanceID: 7236}
+      Script: {instanceID: 7238}
     - Class: 114
-      Script: {instanceID: 8014}
+      Script: {instanceID: 8016}
     - Class: 114
-      Script: {instanceID: 8208}
+      Script: {instanceID: 8210}
     - Class: 114
-      Script: {instanceID: 8394}
+      Script: {instanceID: 8396}
     - Class: 114
-      Script: {instanceID: 8464}
+      Script: {instanceID: 8466}
     - Class: 114
-      Script: {instanceID: 8478}
+      Script: {instanceID: 8480}
     - Class: 114
-      Script: {instanceID: 9004}
-    - Class: 114
-      Script: {instanceID: 26410}
+      Script: {instanceID: 9006}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2020,6 +2295,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIntField
   - hash:
       serializedVersion: 2
+      Hash: 4db728f6aedf31fe7e92e307c34cf6f3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TextureScroll
+  - hash:
+      serializedVersion: 2
       Hash: 91bbe67c3e33d61ae760936f043db32a
     assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
     namespaceName: UnityEngine.Rendering.Universal
@@ -2664,5 +2945,7 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Loading Screen.unity
   - Assets/Scenes/MultiplayerLobby.unity
+  - Assets/Scenes/HUB Area.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Vince/Downloads/CYBAR BUILD/Bar Bar.exe
+  - Assets/Scenes/Area 1/1-3.unity
+  playerPath: C:/Users/Vince/Downloads/CYBAR BUILD 2/Bar Bar.exe

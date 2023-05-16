@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     public void SingleplayerButton()
     {
         PhotonNetwork.OfflineMode = true;
-        SceneManager.LoadScene("Loading Screen");
+        SceneManager.LoadScene("HUB Area");
     }
 
     public void MultiplayerButton()
