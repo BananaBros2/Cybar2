@@ -54,7 +54,7 @@ public class PersonScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collidedObject)
     {
-        if (!view.IsMine)
+        if (!PhotonNetwork.IsMasterClient)
             return;
 
         if (collidedObject.transform == goal)
@@ -80,20 +80,20 @@ public class PersonScript : MonoBehaviour
 
 
     [PunRPC]
-    void RPC_ValueChanges(Vector3 RPCgoalPosition, Quaternion RPCgoalRotation , bool RPCseated)
+    void RPC_ValueChanges(Vector3 RPCgoalPosition, Quaternion RPCgoalRotation, bool RPCseated)
     {
         if(RPCseated == true)
         {
-            agent.enabled = false;
+            GetComponent<NavMeshAgent>().enabled = false;
             GetComponent<Rigidbody>().isKinematic = true;
             transform.position = new Vector3(RPCgoalPosition.x, RPCgoalPosition.y + 1.5f, RPCgoalPosition.z);
             transform.rotation = Quaternion.Euler(0, RPCgoalRotation.y, RPCgoalRotation.z);
         }
         else
         {
-            agent.enabled = true;
+            GetComponent<NavMeshAgent>().enabled = true;
             GetComponent<Rigidbody>().isKinematic = false;
-            agent.destination = RPCgoalPosition;
+            GetComponent<NavMeshAgent>().destination = RPCgoalPosition;
         }
 
     }

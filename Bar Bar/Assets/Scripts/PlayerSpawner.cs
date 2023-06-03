@@ -16,17 +16,23 @@ public class PlayerSpawner : MonoBehaviour
     public float minZ = 2;
     public float maxZ = 2;
 
+    public GameObject singleRobo;
+
     void Start()
     {
-        Vector3 randomPosition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ));
-        if (PhotonNetwork.OfflineMode == false)
+        if(!PhotonNetwork.OfflineMode)
         {
-            player = PhotonNetwork.Instantiate("Player", randomPosition, Quaternion.identity);
+            Destroy(singleRobo);
+            Vector3 randomPosition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ));
+            if (PhotonNetwork.OfflineMode == false)
+            {
+                player = PhotonNetwork.Instantiate("Player", randomPosition, Quaternion.identity);
+            }
+            else
+            {
+                player = Instantiate(playerPrefab, randomPosition, Quaternion.identity);
+            }
+            //player.gameObject.name = ("Player " + PhotonNetwork.LocalPlayer.ActorNumber);
         }
-        else
-        {
-            player = Instantiate(playerPrefab, randomPosition, Quaternion.identity);
-        }
-        //player.gameObject.name = ("Player " + PhotonNetwork.LocalPlayer.ActorNumber);
     }
 }

@@ -40,8 +40,11 @@ public class ItemData : MonoBehaviour
     {
         view = GetComponent<PhotonView>();
         oldList = new List<string> { "_Empty_", "_Empty_", "_Empty_" };
-        if (drinkType1 == "_Empty_") { transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false; }
-        else { transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true; }
+        if (drinkType1 == "_Empty_") 
+        {
+            transform.GetChild(0).gameObject.GetComponent<Renderer>().enabled = false;
+        }
+        
     }
 
     private void Update()
@@ -57,7 +60,8 @@ public class ItemData : MonoBehaviour
         }
         oldList = ingredientsList;
 
-        transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
+        if (ingredientsList.SequenceEqual(new List<string> { "_Empty_", "_Empty_", "_Empty_" })) { transform.GetChild(0).gameObject.GetComponent<Renderer>().enabled = false; }
+        else { transform.GetChild(0).gameObject.GetComponent<Renderer>().enabled = true; }
 
         // BASE DRINKS
         if (ingredientsList.SequenceEqual(new List<string> { "_Empty_", "Grapefruit", "Vodka" })) { drinkID = 1; }          // Greyhound
@@ -73,10 +77,11 @@ public class ItemData : MonoBehaviour
         else if (ingredientsList.SequenceEqual(new List<string> { "Orange", "Vodka", "Vodka" })) { drinkID = 10; }         // Strong Screwdriver
         else if (ingredientsList.SequenceEqual(new List<string> { "Cranberry", "Cranberry", "Vodka" })) { drinkID = 11; }      // Weak Cape Codder
         else if (ingredientsList.SequenceEqual(new List<string> { "Cranberry", "Vodka", "Vodka" })) { drinkID = 12; }      // Strong Cape Codder
+        // Unknown
+        else { drinkID = -1; }
 
-        else { drinkID = -1; }                                                                                              // Unknown
-
-        transform.GetChild(0).GetComponent<Renderer>().material.color = finalColour;
+        
+        transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = new Color(finalColour.r, finalColour.g, finalColour.b);
 
         Color GetColor(string flavour)
         {
@@ -96,23 +101,19 @@ public class ItemData : MonoBehaviour
         Color colour3 = GetColor(drinkType3);
         if (colour1 == blank)
         {
-            finalColour = new Color(0.85f, 0.85f, 0.85f);
-            //print("1");
+            finalColour = new Color(0.85f, 0.85f, 0.85f, 200);
         }
         else if (colour2 == blank)
         {
-            finalColour = colour1 / 255;
-            //print("2");
+            finalColour = new Color(colour1.r / 255, colour1.g / 255, colour1.b / 255, 200);
         }
         else if (colour3 == blank)
         {
-            finalColour = new Color((colour1.r + colour2.r) / 2 / 255, (colour1.g + colour2.g) / 2 / 255, (colour1.b + colour2.b) / 2 / 255);
-            //print("3");
+            finalColour = new Color((colour1.r + colour2.r) / 2 / 255, (colour1.g + colour2.g) / 2 / 255, (colour1.b + colour2.b) / 2 / 255, 200);
         }
         else if (colour3 != blank)
         {
-            finalColour = new Color((colour1.r + colour2.r + colour3.r) / 3 / 255, (colour1.g + colour2.g + colour3.g) / 3 / 255, (colour1.b + colour2.b + colour3.b) / 3 / 255);
-            //print("4");
+            finalColour = new Color((colour1.r + colour2.r + colour3.r) / 3 / 255, (colour1.g + colour2.g + colour3.g) / 3 / 255, (colour1.b + colour2.b + colour3.b) / 3 / 255, 200);
         }
         PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
         view.RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, drinkType1, drinkType2, drinkType3, finalColour.r, finalColour.g, finalColour.b, beingHeld);
@@ -126,7 +127,7 @@ public class ItemData : MonoBehaviour
         if (drinkType1 != "_Empty_") { transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true; }
         drinkType2 = RPCType2;
         drinkType3 = RPCType3;
-        finalColour = new Color(RPCred, RPCgreen, RPCblue);
+        finalColour = new Color(RPCred, RPCgreen, RPCblue, 200);
         beingHeld = RPCheld;
     }
 
@@ -188,7 +189,7 @@ public class ItemData : MonoBehaviour
         }
     }
 
-        [PunRPC]
+    [PunRPC]
     void RPC_Delete()
     {
         PhotonNetwork.Destroy(this.gameObject);

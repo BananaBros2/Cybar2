@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
 // Adds tools needed for the UI
 using UnityEngine.UI;
 
@@ -16,8 +16,12 @@ public class ContainerData : MonoBehaviour
     private Camera cam;
     public Image image;
 
+    public PhotonView view;
+
     private void Start()
     {
+        view = GetComponent<PhotonView>();
+
         // Sets the contents to the max value on start.
         count = capacity;
 
@@ -45,4 +49,12 @@ public class ContainerData : MonoBehaviour
         // Changes the rotation of the canvas to face towards the camera 
         transform.GetChild(0).LookAt(new Vector3(transform.position.x, cam.transform.position.y, cam.transform.position.z));
     }
+
+    [PunRPC]
+    public void RPC_ContainerDecrease(int RPCCount)
+    {
+        count = RPCCount;
+        transform.GetChild(count+1).gameObject.SetActive(false);
+    }
+
 }

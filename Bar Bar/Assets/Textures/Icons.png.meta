@@ -481,6 +481,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Computer Background
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304c386c754beee4691690b7671e83ba
+      internalID: -295559400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Computer_Exit
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 2
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa8b643e6bcd264a828fa0a3c0e3b6d
+      internalID: -1809969101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: File1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc472644d69825b46802685f7a164bdf
+      internalID: 106088311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -492,6 +555,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Computer_Exit: -1809969101
       5 Madras: 1243729016
       4 Sea Breeze: -1050836189
       ING HighballGlass: 1004566368
@@ -505,6 +569,8 @@ TextureImporter:
       Cursor: 1489375786
       12 Strong Cape Codder: -1391969446
       Delivery: 916264180
+      Computer Background: -295559400
+      File1: 106088311
       ING Cranberry: -146112847
       ING Grapefruit: -1791765747
       11 Weak Cape Codder: 455536625

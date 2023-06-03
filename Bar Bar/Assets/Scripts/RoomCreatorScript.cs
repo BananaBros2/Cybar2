@@ -33,6 +33,7 @@ public class RoomCreatorScript : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("1-3");
+        PhotonNetwork.CurrentRoom.MaxPlayers = 4; 
+        PhotonNetwork.LoadLevel("HUB Area");
     }
 }

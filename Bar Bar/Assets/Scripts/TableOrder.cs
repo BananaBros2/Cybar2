@@ -40,13 +40,17 @@ public class TableOrder : MonoBehaviour
             transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = drinkImages[desiredDrink];
             transform.GetChild(1).GetChild(1).GetComponent<Image>().enabled = true;
             PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
-            GetComponent<PhotonView>().RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, desiredDrink, satOn, orderRecieved);
+            GetComponent<PhotonView>().RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, desiredDrink, satOn, orderRecieved, person.gameObject.GetPhotonView().ViewID);
         }
 
         if(drinkChosen)
         {
             progressFill += Time.deltaTime;
             progressBar.fillAmount = 1 - progressFill / 30;
+
+            PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_BarSync");
+            view.RPC("RPC_BarSync", RpcTarget.OthersBuffered, progressFill);
+
             if (progressBar.fillAmount <= 0) 
             {
                 person.GetComponent<NavMeshAgent>().enabled = true;
@@ -58,7 +62,7 @@ public class TableOrder : MonoBehaviour
 
                 GameObject.Find("StatsObject").GetComponent<GameStats>().levelScore -= 10;
 
-                transform.GetChild(1).GetChild(0).GetComponent<Image>().enabled = false;
+                transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = drinkImages[0];
                 transform.GetChild(1).GetChild(1).GetComponent<Image>().enabled = false;
 
                 person.GetComponent<Rigidbody>().isKinematic = false;
@@ -66,9 +70,13 @@ public class TableOrder : MonoBehaviour
                 satOn = false;
                 orderRecieved = false;
                 drinkChosen = false;
+                progressFill = 0;
+                progressBar.fillAmount = 0;
+                person = null;
 
                 PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
-                view.RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, desiredDrink, satOn, orderRecieved);
+                PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_HideOrder");
+                view.RPC("RPC_HideOrder", RpcTarget.OthersBuffered);
             }
         }
 
@@ -83,28 +91,63 @@ public class TableOrder : MonoBehaviour
 
             GameObject.Find("StatsObject").GetComponent<GameStats>().levelScore += 30;
 
+            transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = drinkImages[0];
+            transform.GetChild(1).GetChild(1).GetComponent<Image>().enabled = false;
+
             person.GetComponent<Rigidbody>().isKinematic = false;
             desiredDrink = -2;
             satOn = false;
             orderRecieved = false;
             drinkChosen = false;
+            person = null;
+            progressFill = 0;
+            progressBar.fillAmount = 0;
 
             PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_ValueChanges");
-            view.RPC("RPC_ValueChanges", RpcTarget.OthersBuffered, desiredDrink, satOn, orderRecieved);
+            PhotonNetwork.RemoveBufferedRPCs(view.ViewID, "RPC_HideOrder");
+            view.RPC("RPC_HideOrder", RpcTarget.OthersBuffered);
         }
     }
 
 
     [PunRPC]
-    void RPC_ValueChanges(int RPCdrink, bool RPCsatOn, bool RPCrecieved)
+    void RPC_ValueChanges(int RPCdrink, bool RPCsatOn, bool RPCrecieved, int RPCIndex)
     {
         desiredDrink = RPCdrink;
         satOn = RPCsatOn;
         orderRecieved = RPCrecieved;
+
+        person = PhotonView.Find(RPCIndex).gameObject;
+        person.GetComponent<Rigidbody>().isKinematic = true;
+
         if (desiredDrink != -2)
         {
             transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = drinkImages[desiredDrink];
+            transform.GetChild(1).GetChild(1).GetComponent<Image>().enabled = true;
         }
+    }
+
+    [PunRPC]
+    void RPC_BarSync(float RPCFill)
+    {
+        progressFill = RPCFill;
+        progressBar.fillAmount = 1 - progressFill / 40;
+    }
+
+    [PunRPC]
+    void RPC_HideOrder()
+    {
+        transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = drinkImages[0];
+        transform.GetChild(1).GetChild(1).GetComponent<Image>().enabled = false;
+
+        person.GetComponent<Rigidbody>().isKinematic = false;
+        desiredDrink = -2;
+        satOn = false;
+        orderRecieved = false;
+        drinkChosen = false;
+        person = null;
+        progressFill = 0;
+        progressBar.fillAmount = 0;
     }
 
 }

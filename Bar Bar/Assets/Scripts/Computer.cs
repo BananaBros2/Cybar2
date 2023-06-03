@@ -43,7 +43,8 @@ public class Computer : MonoBehaviour
     public BoxCollider deliveryZone;
     Vector3 size;
 
-
+    public PauseMenu pauseMenu;
+    bool newPause;
 
 
     void Start()
@@ -59,6 +60,18 @@ public class Computer : MonoBehaviour
 
     void Update()
     {
+
+        if (pauseMenu.gamePaused)
+        {
+            newPause = true;
+            return;
+        }
+        if (!pauseMenu.gamePaused && newPause)
+        {
+            lastSelected.GetComponent<Button>().Select();
+            newPause = false;
+        }
+
 
         if (EventSystem.current.currentSelectedGameObject == null)
         {
