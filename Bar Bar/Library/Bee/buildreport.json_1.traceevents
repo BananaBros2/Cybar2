@@ -1,650 +1,479 @@
 { "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
 { "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
 { "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
-{ "pid": 0, "tid": 1, "ts": 1686099762817888, "dur": 3362567, "ph": "X", "name": "Build ScriptAssemblies", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099762819092, "dur": 67821, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099762887051, "dur": 167607, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099763054693, "dur": 514502, "ph": "X", "name": "BuildProgram", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099763569197, "dur": 2601174, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099766170389, "dur": 10066, "ph": "X", "name": "Finish", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099791878655, "dur": 913232, "ph": "X", "name": "Build Player", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099791878892, "dur": 10750, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099791889649, "dur": 41535, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099791931186, "dur": 537420, "ph": "X", "name": "BuildProgram", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099792468610, "dur": 311257, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099792779870, "dur": 12013, "ph": "X", "name": "Finish", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099792792915, "dur": 35, "ph": "X", "name": "", "args": {} },
-{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
-{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
-{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
-{ "pid": 35942, "tid": 1, "ts": 1686099792315022, "dur": 141093, "ph": "X", "name": "BuildProgram", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1686099792315946, "dur": 39160, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1686099792440136, "dur": 4600, "ph": "X", "name": "OutputData.Write", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1686099792444739, "dur": 11347, "ph": "X", "name": "Backend.Write", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1686099792445467, "dur": 9729, "ph": "X", "name": "JsonToString", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1686099792461087, "dur": 1157, "ph": "X", "name": "", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1686099792460325, "dur": 1946, "ph": "X", "name": "Write chrome-trace events", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099792793065, "dur": 287, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1686161954951407, "dur": 2079256, "ph": "X", "name": "Build ScriptAssemblies", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1686161954952579, "dur": 47645, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1686161955000358, "dur": 140118, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1686161955140512, "dur": 451988, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1686161955592502, "dur": 1428083, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1686161957020602, "dur": 10060, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1686161974844394, "dur": 169324, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1686161974844615, "dur": 13183, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1686161974857802, "dur": 146422, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1686161975004226, "dur": 9489, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1686161975014391, "dur": 23, "ph": "X", "name": "", "args": {} },
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1686099792504664, "dur":1336, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792506006, "dur":123, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
-,{ "pid":12345, "tid":0, "ts":1686099792506162, "dur":29, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
-,{ "pid":12345, "tid":0, "ts":1686099792506192, "dur":209, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
-,{ "pid":12345, "tid":0, "ts":1686099792506414, "dur":685, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792507099, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755170, "dur":74, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755244, "dur":83, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755327, "dur":22, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755349, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755360, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755363, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755371, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755373, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755380, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755381, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755388, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755389, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755395, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755397, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755403, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755405, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755416, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755429, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792755447, "dur":4081, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1686099792507397, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792507398, "dur":4536, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792511935, "dur":115, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":1, "ts":1686099792512053, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792520066, "dur":5383, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":1, "ts":1686099792525498, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":1, "ts":1686099792525659, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792526070, "dur":1944, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":1, "ts":1686099792529004, "dur":14252, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":1, "ts":1686099792543260, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792543268, "dur":2273, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":1, "ts":1686099792545605, "dur":326, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792545935, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792545946, "dur":4753, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792550752, "dur":220, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792550976, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792551006, "dur":1438, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792552497, "dur":42891, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792595395, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792595406, "dur":1768, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792597228, "dur":219, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792597450, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792597457, "dur":1353, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792598859, "dur":172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792599034, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792599056, "dur":4524, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792603623, "dur":271, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792603898, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792603905, "dur":3619, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792607729, "dur":195, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792607928, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792607967, "dur":1257, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792609272, "dur":164, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792609439, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792609445, "dur":842, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792610335, "dur":263, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792610601, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792610607, "dur":1083, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792611745, "dur":425, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792612173, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792612180, "dur":974, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792613210, "dur":591, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792613805, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792613812, "dur":1829, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792615700, "dur":183, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792615887, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792615918, "dur":1872, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792617843, "dur":173, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792618019, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792618027, "dur":1499, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792619577, "dur":115, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792619695, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792619700, "dur":4369, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Analytics.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792624124, "dur":405, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792624533, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792624539, "dur":3408, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792628003, "dur":115447, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Burst.Cecil.Mdb.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792743457, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1686099792743470, "dur":1364, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Burst.Cecil.Mdb.dll" }}
-,{ "pid":12345, "tid":1, "ts":1686099792744878, "dur":10296, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792507065, "dur":95, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792507160, "dur":4775, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792511936, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":2, "ts":1686099792512052, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792519613, "dur":8373, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":2, "ts":1686099792528099, "dur":194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":2, "ts":1686099792528298, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792528377, "dur":3684, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":2, "ts":1686099792532128, "dur":108921, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792641054, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792641062, "dur":33154, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792674274, "dur":256, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792674534, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792674544, "dur":3051, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792677645, "dur":253, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792677901, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792677909, "dur":1614, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792679567, "dur":2342, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792681913, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792681920, "dur":6177, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792688161, "dur":333, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/PhotonUnityNetworking.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792688498, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792688516, "dur":1313, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/PhotonUnityNetworking.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792689876, "dur":214, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/PhotonChat.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792690093, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792690098, "dur":2467, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/PhotonChat.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792692609, "dur":207, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792692819, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792692827, "dur":2548, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792695422, "dur":363, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792695789, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792695796, "dur":1494, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":2, "ts":1686099792697332, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":2, "ts":1686099792697375, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792697432, "dur":1241, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":2, "ts":1686099792698721, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets5.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1686099792698768, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792698774, "dur":1750, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets5.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1686099792700573, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets4.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1686099792700621, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792700627, "dur":4557, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets4.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1686099792705260, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets3.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1686099792705314, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792705329, "dur":3448, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets3.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1686099792708896, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets2.assets" }}
-,{ "pid":12345, "tid":2, "ts":1686099792708955, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792708962, "dur":4287, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets2.assets" }}
-,{ "pid":12345, "tid":2, "ts":1686099792713309, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1686099792713385, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792713400, "dur":5726, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1686099792719170, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1686099792719232, "dur":5, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792719242, "dur":4549, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1686099792723855, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level5" }}
-,{ "pid":12345, "tid":2, "ts":1686099792723910, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792723917, "dur":3224, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level5" }}
-,{ "pid":12345, "tid":2, "ts":1686099792727186, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level3" }}
-,{ "pid":12345, "tid":2, "ts":1686099792727231, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792727237, "dur":2001, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level3" }}
-,{ "pid":12345, "tid":2, "ts":1686099792729293, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level1" }}
-,{ "pid":12345, "tid":2, "ts":1686099792729339, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792729343, "dur":2487, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level1" }}
-,{ "pid":12345, "tid":2, "ts":1686099792731885, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":2, "ts":1686099792731942, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1686099792731981, "dur":3586, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":2, "ts":1686099792735610, "dur":19572, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792506865, "dur":281, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792507147, "dur":4739, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792511893, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
-,{ "pid":12345, "tid":3, "ts":1686099792511894, "dur":108, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792512007, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/app.info" }}
-,{ "pid":12345, "tid":3, "ts":1686099792512011, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792512879, "dur":3033, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/app.info" }}
-,{ "pid":12345, "tid":3, "ts":1686099792515918, "dur":14622, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":3, "ts":1686099792530543, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792530551, "dur":1102, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":3, "ts":1686099792531712, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":3, "ts":1686099792531823, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792531831, "dur":2898, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":3, "ts":1686099792534794, "dur":793, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar.exe" }}
-,{ "pid":12345, "tid":3, "ts":1686099792535593, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792535601, "dur":3272, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar.exe" }}
-,{ "pid":12345, "tid":3, "ts":1686099792538926, "dur":19978, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/websocket-sharp.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792558908, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792558917, "dur":1691, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/websocket-sharp.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792562312, "dur":358, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792562681, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792562695, "dur":1588, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792564334, "dur":197, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792564535, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792564542, "dur":1241, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792565969, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792566127, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792566135, "dur":2264, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792568442, "dur":145, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792568590, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792568595, "dur":4119, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792572786, "dur":180, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792572969, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792572997, "dur":958, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792574010, "dur":244, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792574258, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792574268, "dur":1196, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792575526, "dur":27494, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792603023, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792603032, "dur":1632, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792604711, "dur":1303, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792606018, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792606024, "dur":2411, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792608485, "dur":169, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792608657, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792608662, "dur":1038, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792609748, "dur":152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792609903, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792609908, "dur":859, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792610832, "dur":226, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792611083, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792611090, "dur":1750, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792612899, "dur":261, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792613163, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792613171, "dur":998, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792614216, "dur":313, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792614534, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792614542, "dur":2465, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792617051, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792617201, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792617207, "dur":2101, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Internal.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792619345, "dur":142, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792619490, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792619495, "dur":4042, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Configuration.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792623578, "dur":111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792623692, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792623697, "dur":3671, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792627422, "dur":83287, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Burst.Cecil.Rocks.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792710714, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792710721, "dur":14143, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Burst.Cecil.Rocks.dll" }}
-,{ "pid":12345, "tid":3, "ts":1686099792724914, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level4" }}
-,{ "pid":12345, "tid":3, "ts":1686099792724962, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792725124, "dur":4638, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level4" }}
-,{ "pid":12345, "tid":3, "ts":1686099792729811, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level0" }}
-,{ "pid":12345, "tid":3, "ts":1686099792729877, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792729883, "dur":2354, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level0" }}
-,{ "pid":12345, "tid":3, "ts":1686099792732297, "dur":150, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/boot.config" }}
-,{ "pid":12345, "tid":3, "ts":1686099792732449, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1686099792732455, "dur":3015, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/boot.config" }}
-,{ "pid":12345, "tid":3, "ts":1686099792735538, "dur":19647, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792506907, "dur":244, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792507151, "dur":4827, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792511979, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":4, "ts":1686099792512092, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792520944, "dur":8276, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":4, "ts":1686099792529366, "dur":229, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":4, "ts":1686099792529599, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792529608, "dur":2164, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":4, "ts":1686099792531829, "dur":35283, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792567117, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792567327, "dur":13900, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792581277, "dur":190, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792581470, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792581477, "dur":1467, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792582988, "dur":144, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792583135, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792583140, "dur":2869, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792586051, "dur":172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792586226, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792586232, "dur":919, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792587200, "dur":648, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792587852, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792587858, "dur":982, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792588887, "dur":174, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792589064, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792589071, "dur":1551, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792590669, "dur":175, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792590847, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792590854, "dur":2152, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792593067, "dur":24119, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792617189, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792617196, "dur":1944, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792619198, "dur":218, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792619419, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792619425, "dur":3764, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Device.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792623237, "dur":146, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792623408, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792623416, "dur":3737, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792627212, "dur":125, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Burst.Unsafe.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792627340, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792627346, "dur":2378, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Burst.Unsafe.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792629775, "dur":177, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.2D.Common.Runtime.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792629956, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792629970, "dur":2289, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.2D.Common.Runtime.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792632314, "dur":276, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792632592, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792632599, "dur":5651, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792638302, "dur":322, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792638627, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792638634, "dur":24144, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792662830, "dur":1286, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792664160, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792664170, "dur":12123, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792676346, "dur":161, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792676510, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792676517, "dur":1881, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792678440, "dur":520, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792678963, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792678968, "dur":2873, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792682632, "dur":3638, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792686276, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792686298, "dur":3178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792689522, "dur":236, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/PhotonUnityNetworking.Demos.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792689761, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792689766, "dur":6006, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/PhotonUnityNetworking.Demos.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792695821, "dur":32010, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Plugins/x86_64/lib_burst_generated.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792727862, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792728780, "dur":755, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Plugins/x86_64/lib_burst_generated.dll" }}
-,{ "pid":12345, "tid":4, "ts":1686099792729577, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level0.resS" }}
-,{ "pid":12345, "tid":4, "ts":1686099792729623, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792729628, "dur":2207, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level0.resS" }}
-,{ "pid":12345, "tid":4, "ts":1686099792731937, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":4, "ts":1686099792732012, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1686099792732017, "dur":3177, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":4, "ts":1686099792735252, "dur":19916, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792507180, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792507181, "dur":4729, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792511911, "dur":122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":5, "ts":1686099792512035, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792514204, "dur":1746, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":5, "ts":1686099792515998, "dur":658, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":5, "ts":1686099792516660, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792517063, "dur":1907, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":5, "ts":1686099792519020, "dur":10603, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":5, "ts":1686099792529627, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792529634, "dur":1077, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":5, "ts":1686099792530761, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":5, "ts":1686099792530918, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792530925, "dur":2482, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":5, "ts":1686099792533461, "dur":5294, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":5, "ts":1686099792538759, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792538765, "dur":1947, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":5, "ts":1686099792540769, "dur":231, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792541004, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792541241, "dur":1518, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792542823, "dur":210, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792543036, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792543106, "dur":1616, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792544776, "dur":179, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792544958, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792544967, "dur":3293, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792548328, "dur":274, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792548607, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792548640, "dur":2957, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792551647, "dur":157, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792551807, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792551813, "dur":968, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792552832, "dur":159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792552994, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792553065, "dur":1832, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792554966, "dur":42154, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792597126, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792597135, "dur":2337, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792599519, "dur":337, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792599859, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792599866, "dur":2648, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792602566, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792602757, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792602769, "dur":2916, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792605733, "dur":214, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792605951, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792605958, "dur":2313, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792608320, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792608478, "dur":5, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792608489, "dur":8073, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792616606, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792616737, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792616743, "dur":1798, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Networking.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792618592, "dur":139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792618734, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792618742, "dur":1178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Environments.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792619974, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792620124, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792620131, "dur":4591, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792624791, "dur":130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792624925, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792624931, "dur":3003, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792628002, "dur":83638, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Burst.Cecil.Pdb.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792711644, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792711653, "dur":12511, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Burst.Cecil.Pdb.dll" }}
-,{ "pid":12345, "tid":5, "ts":1686099792724206, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level4.resS" }}
-,{ "pid":12345, "tid":5, "ts":1686099792724251, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792724255, "dur":2442, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level4.resS" }}
-,{ "pid":12345, "tid":5, "ts":1686099792726749, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level3.resS" }}
-,{ "pid":12345, "tid":5, "ts":1686099792726794, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792726818, "dur":1856, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level3.resS" }}
-,{ "pid":12345, "tid":5, "ts":1686099792728730, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level2" }}
-,{ "pid":12345, "tid":5, "ts":1686099792728779, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792728786, "dur":1498, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level2" }}
-,{ "pid":12345, "tid":5, "ts":1686099792730346, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":5, "ts":1686099792730406, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1686099792730412, "dur":5038, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":5, "ts":1686099792735500, "dur":19671, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792507027, "dur":129, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792507156, "dur":4778, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792511934, "dur":18245, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":6, "ts":1686099792530183, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792530201, "dur":1520, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":6, "ts":1686099792531767, "dur":3884, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792535655, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792535931, "dur":2378, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792538383, "dur":178, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":6, "ts":1686099792538564, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792538893, "dur":11255, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":6, "ts":1686099792550212, "dur":191, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792550407, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792550416, "dur":1219, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792551679, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792551817, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792551822, "dur":1168, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792553040, "dur":181, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792553224, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792553230, "dur":3109, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792556408, "dur":169, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792556580, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792556590, "dur":1535, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792558171, "dur":1260, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792559434, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792559463, "dur":3711, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792563223, "dur":176, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792563402, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792563409, "dur":1854, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792565333, "dur":209, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792565546, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792565554, "dur":1047, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792566653, "dur":53624, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792620280, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792620288, "dur":6018, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792626347, "dur":172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792626522, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792626528, "dur":3042, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792629625, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.2D.IK.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792629783, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792629806, "dur":2583, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.2D.IK.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792632435, "dur":3101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792635542, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792635552, "dur":27785, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792663392, "dur":154, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792663549, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792663561, "dur":11631, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792675238, "dur":457, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792675697, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792675705, "dur":2121, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792677873, "dur":166, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792678042, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792678048, "dur":3015, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792681109, "dur":183, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792681295, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792681305, "dur":1521, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792683031, "dur":323, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792683358, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792683369, "dur":2373, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792685833, "dur":555, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792686391, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792686399, "dur":4523, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792690996, "dur":927, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Photon3Unity3D.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792691930, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792691940, "dur":2936, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Photon3Unity3D.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792694941, "dur":4904, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792699849, "dur":16, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792699870, "dur":5845, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":6, "ts":1686099792705773, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets3.assets" }}
-,{ "pid":12345, "tid":6, "ts":1686099792705831, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792705838, "dur":3230, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets3.assets" }}
-,{ "pid":12345, "tid":6, "ts":1686099792709114, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets1.assets.resS" }}
-,{ "pid":12345, "tid":6, "ts":1686099792709163, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792709169, "dur":9068, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets1.assets.resS" }}
-,{ "pid":12345, "tid":6, "ts":1686099792718314, "dur":209, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":6, "ts":1686099792718526, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792718535, "dur":4901, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":6, "ts":1686099792723565, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/resources.assets" }}
-,{ "pid":12345, "tid":6, "ts":1686099792723624, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792723636, "dur":3554, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/resources.assets" }}
-,{ "pid":12345, "tid":6, "ts":1686099792727265, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level2.resS" }}
-,{ "pid":12345, "tid":6, "ts":1686099792727317, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792727322, "dur":1533, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level2.resS" }}
-,{ "pid":12345, "tid":6, "ts":1686099792728901, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level1.resS" }}
-,{ "pid":12345, "tid":6, "ts":1686099792728948, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1686099792728953, "dur":4651, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/level1.resS" }}
-,{ "pid":12345, "tid":6, "ts":1686099792733692, "dur":21475, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792507204, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792507204, "dur":4686, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792511893, "dur":58100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":7, "ts":1686099792570097, "dur":5, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792570686, "dur":2161, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":7, "ts":1686099792572957, "dur":202, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792573163, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792573172, "dur":999, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792574220, "dur":32460, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792606685, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792606693, "dur":4150, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792610896, "dur":190, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792611090, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792611096, "dur":2981, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792614125, "dur":125, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792614253, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792614260, "dur":2294, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Threading.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792616602, "dur":310, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792616915, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792616921, "dur":1783, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.Registration.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792618753, "dur":148, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792618904, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792618931, "dur":4091, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Services.Core.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792623071, "dur":597, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792623671, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792623677, "dur":3504, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792627244, "dur":419, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Burst.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792627666, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792627672, "dur":3714, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Burst.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792631443, "dur":185, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792631653, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792631661, "dur":5428, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792637142, "dur":167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792637312, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792637320, "dur":23372, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792662797, "dur":1372, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792664172, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792664180, "dur":14323, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792678554, "dur":2854, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792681411, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792681418, "dur":4661, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792686137, "dur":333, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/PhotonUnityNetworking.Utilities.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792686591, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792686601, "dur":2896, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/PhotonUnityNetworking.Utilities.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792689543, "dur":207, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/PhotonRealtime.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792689752, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792689760, "dur":2237, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/PhotonRealtime.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792692045, "dur":776, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792692847, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792692853, "dur":2638, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792695544, "dur":189, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792695736, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792695747, "dur":1522, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":7, "ts":1686099792697319, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
-,{ "pid":12345, "tid":7, "ts":1686099792697458, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792698297, "dur":1508, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
-,{ "pid":12345, "tid":7, "ts":1686099792699879, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets5.assets" }}
-,{ "pid":12345, "tid":7, "ts":1686099792699922, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792699926, "dur":939, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets5.assets" }}
-,{ "pid":12345, "tid":7, "ts":1686099792700912, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets4.assets" }}
-,{ "pid":12345, "tid":7, "ts":1686099792700963, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792700969, "dur":6004, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets4.assets" }}
-,{ "pid":12345, "tid":7, "ts":1686099792707023, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets2.assets.resS" }}
-,{ "pid":12345, "tid":7, "ts":1686099792707068, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792707075, "dur":2344, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets2.assets.resS" }}
-,{ "pid":12345, "tid":7, "ts":1686099792709462, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":7, "ts":1686099792709506, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792709511, "dur":7436, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":7, "ts":1686099792717012, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":7, "ts":1686099792717056, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792717069, "dur":2036, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":7, "ts":1686099792719156, "dur":20980, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":7, "ts":1686099792740145, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1686099792740158, "dur":1418, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":7, "ts":1686099792741632, "dur":13538, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792507280, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792507281, "dur":4654, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792511935, "dur":11443, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":8, "ts":1686099792523383, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792523403, "dur":1181, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":8, "ts":1686099792524636, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":8, "ts":1686099792524766, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792524775, "dur":1603, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":8, "ts":1686099792526433, "dur":15826, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":8, "ts":1686099792542266, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792542280, "dur":1228, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":8, "ts":1686099792543561, "dur":190, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792543754, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792543761, "dur":2988, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792546817, "dur":267, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792547088, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792547102, "dur":3907, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792551091, "dur":191, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792551285, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792551291, "dur":1180, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792552522, "dur":170, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792552696, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792552702, "dur":1362, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792554119, "dur":310, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UNETModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792554432, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792554443, "dur":2383, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UNETModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792556878, "dur":263, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792557144, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792557153, "dur":1552, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792558756, "dur":342, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792559101, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792559106, "dur":1750, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792561080, "dur":254, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792561339, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792561350, "dur":2336, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792563740, "dur":326, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792564069, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792564077, "dur":1576, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792565711, "dur":242, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792565956, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792565963, "dur":2359, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792568368, "dur":165, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792568536, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792568545, "dur":10162, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792578788, "dur":302, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792579094, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792579101, "dur":1884, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792581040, "dur":266, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792581309, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792581317, "dur":1189, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792582544, "dur":264, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792582831, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792582838, "dur":2908, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792585816, "dur":180, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792585999, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792586007, "dur":968, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792587027, "dur":180, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792587210, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792587217, "dur":1042, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792588425, "dur":278, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792588707, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792588714, "dur":1355, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792590118, "dur":30165, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792620287, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792620294, "dur":5436, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792625782, "dur":796, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Mathematics.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792626580, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792626585, "dur":2695, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Mathematics.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792629344, "dur":124619, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Burst.Cecil.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792753969, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1686099792753977, "dur":1135, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Build 5/Bar Bar_Data/Managed/Unity.Burst.Cecil.dll" }}
-,{ "pid":12345, "tid":8, "ts":1686099792755150, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
-,{ "pid":12345, "tid":8, "ts":1686099792755151, "dur":1, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1686099792761796, "dur":2906, "ph":"X", "name": "ProfilerWriteOutput" }
-,{ "pid": 0, "tid": 1, "ts": 1686099792793440, "dur": 1019, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1686099792792898, "dur": 1588, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+,{ "pid":12345, "tid":0, "ts":1686161974924271, "dur":4930, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974929224, "dur":1280, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1686161974930621, "dur":106, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1686161974930730, "dur":829, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1686161974931643, "dur":2388, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974934031, "dur":3, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974992867, "dur":128, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974992995, "dur":23, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993018, "dur":14, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993032, "dur":16, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993048, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993051, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993057, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993058, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993063, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993065, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993070, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993071, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993076, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993077, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993082, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993083, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993089, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993113, "dur":1, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974993129, "dur":2950, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1686161974932636, "dur":1452, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974934088, "dur":20606, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974954695, "dur":149, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1686161974954845, "dur":117, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974954964, "dur":164, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1686161974955128, "dur":129, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974955258, "dur":2302, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":1, "ts":1686161974957560, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974957645, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1686161974957734, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974957825, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1686161974957938, "dur":115, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974958054, "dur":316, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1686161974958370, "dur":171, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974958542, "dur":2251, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1686161974960793, "dur":102, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974960896, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Burst.Cecil.Mdb.dll" }}
+,{ "pid":12345, "tid":1, "ts":1686161974960991, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974961086, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":1, "ts":1686161974961177, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974961267, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1686161974961365, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974961450, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1686161974961538, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974961620, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":1, "ts":1686161974961716, "dur":113, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974961830, "dur":430, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/PhotonUnityNetworking.dll" }}
+,{ "pid":12345, "tid":1, "ts":1686161974962260, "dur":99, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974962360, "dur":174, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":1, "ts":1686161974962535, "dur":315, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974962852, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets4.assets" }}
+,{ "pid":12345, "tid":1, "ts":1686161974962949, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1686161974984513, "dur":3181, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets4.assets" }}
+,{ "pid":12345, "tid":1, "ts":1686161974987750, "dur":5102, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974932521, "dur":1532, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974934058, "dur":20439, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974954525, "dur":4, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":2, "ts":1686161974954530, "dur":135, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974954677, "dur":4, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/app.info" }}
+,{ "pid":12345, "tid":2, "ts":1686161974954682, "dur":116, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974954799, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1686161974954940, "dur":123, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974955064, "dur":119, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1686161974955184, "dur":108, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974955294, "dur":124, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":2, "ts":1686161974955418, "dur":115, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974955535, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1686161974955673, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974955786, "dur":121, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1686161974955907, "dur":116, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974956025, "dur":134, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1686161974956160, "dur":110, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974956272, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1686161974956385, "dur":108, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974956494, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1686161974956629, "dur":2702, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974959332, "dur":1367, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":2, "ts":1686161974960700, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974960795, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Burst.Cecil.Pdb.dll" }}
+,{ "pid":12345, "tid":2, "ts":1686161974960884, "dur":142, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974961027, "dur":300, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1686161974961327, "dur":1265, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974962593, "dur":256, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets5.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1686161974962894, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974973539, "dur":1844, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets5.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1686161974975445, "dur":1147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":2, "ts":1686161974976593, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974976655, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level5" }}
+,{ "pid":12345, "tid":2, "ts":1686161974976721, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974976728, "dur":3197, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level5" }}
+,{ "pid":12345, "tid":2, "ts":1686161974980007, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level4" }}
+,{ "pid":12345, "tid":2, "ts":1686161974980081, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974980097, "dur":1335, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level4" }}
+,{ "pid":12345, "tid":2, "ts":1686161974981487, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level2" }}
+,{ "pid":12345, "tid":2, "ts":1686161974981542, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974981548, "dur":1012, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level2" }}
+,{ "pid":12345, "tid":2, "ts":1686161974982603, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level0.resS" }}
+,{ "pid":12345, "tid":2, "ts":1686161974982665, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974982670, "dur":1146, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level0.resS" }}
+,{ "pid":12345, "tid":2, "ts":1686161974983864, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":2, "ts":1686161974983968, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1686161974983975, "dur":3855, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":2, "ts":1686161974987887, "dur":4995, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974932604, "dur":1466, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974934071, "dur":20441, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974954524, "dur":227, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1686161974954752, "dur":129, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974954883, "dur":125, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1686161974955009, "dur":119, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974955130, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1686161974955269, "dur":114, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974955384, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":3, "ts":1686161974955543, "dur":180, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974955725, "dur":122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974955847, "dur":113, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974955962, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974956088, "dur":672, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974956761, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974956887, "dur":107, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974956996, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974957143, "dur":210, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974957355, "dur":111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974957467, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974957549, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974957633, "dur":396, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974958030, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974958158, "dur":197, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974958356, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974958466, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974958549, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974958641, "dur":103, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974958746, "dur":256, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974959004, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974959092, "dur":302, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974959395, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974959488, "dur":1150, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974960638, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974960733, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Burst.Cecil.Rocks.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974960823, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974960914, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Burst.Cecil.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974961012, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974961101, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974961195, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974961288, "dur":121, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974961410, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974961510, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974961605, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974961700, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974961800, "dur":126, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974961928, "dur":424, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/PhotonRealtime.dll" }}
+,{ "pid":12345, "tid":3, "ts":1686161974962352, "dur":461, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974962814, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets5.assets" }}
+,{ "pid":12345, "tid":3, "ts":1686161974962929, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974974515, "dur":1658, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets5.assets" }}
+,{ "pid":12345, "tid":3, "ts":1686161974976236, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/resources.assets" }}
+,{ "pid":12345, "tid":3, "ts":1686161974976309, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974976316, "dur":4517, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/resources.assets" }}
+,{ "pid":12345, "tid":3, "ts":1686161974980893, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level3" }}
+,{ "pid":12345, "tid":3, "ts":1686161974980971, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974980979, "dur":1076, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level3" }}
+,{ "pid":12345, "tid":3, "ts":1686161974982113, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level1" }}
+,{ "pid":12345, "tid":3, "ts":1686161974982168, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974982174, "dur":1011, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level1" }}
+,{ "pid":12345, "tid":3, "ts":1686161974983244, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":3, "ts":1686161974983311, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1686161974983317, "dur":4438, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":3, "ts":1686161974987807, "dur":5046, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974932697, "dur":1407, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974934104, "dur":20451, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974954556, "dur":586, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1686161974955142, "dur":114, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974955258, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":4, "ts":1686161974955393, "dur":118, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974955513, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/websocket-sharp.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974955641, "dur":122, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974955765, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974955900, "dur":109, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974956010, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974956137, "dur":109, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974956247, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974956360, "dur":124, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974956485, "dur":145, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974956631, "dur":123, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974956755, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974956869, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974956968, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974957080, "dur":102, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974957184, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974957293, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974957381, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974957482, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974957578, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974957669, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974957761, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974957848, "dur":99, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974957948, "dur":198, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974958146, "dur":287, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974958435, "dur":205, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974958640, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974958740, "dur":289, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974959029, "dur":96, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974959126, "dur":408, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974959535, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974959622, "dur":238, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974959860, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974959949, "dur":906, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974960855, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974960949, "dur":260, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974961209, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974961301, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974961408, "dur":105, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974961515, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974961611, "dur":96, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974961708, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974961812, "dur":102, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974961915, "dur":443, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/PhotonUnityNetworking.Demos.dll" }}
+,{ "pid":12345, "tid":4, "ts":1686161974962359, "dur":110, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974962470, "dur":249, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":4, "ts":1686161974962719, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974962816, "dur":102, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets4.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1686161974962929, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1686161974984100, "dur":3192, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets4.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1686161974987393, "dur":5472, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974932782, "dur":1346, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974934128, "dur":20388, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974954525, "dur":183, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":5, "ts":1686161974954709, "dur":127, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974954848, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":5, "ts":1686161974954986, "dur":109, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974955097, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1686161974955256, "dur":119, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974955376, "dur":140, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974955517, "dur":108, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974955626, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974955756, "dur":116, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974955874, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974955984, "dur":116, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974956101, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974956231, "dur":117, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974956349, "dur":123, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974956472, "dur":104, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974956578, "dur":765, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974957343, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974957442, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974957535, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974957618, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974957712, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974957796, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974957886, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974957965, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974958060, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974958154, "dur":195, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974958349, "dur":1871, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974960222, "dur":1418, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974961640, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974961727, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974961847, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974961937, "dur":306, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/PhotonChat.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974962243, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974962337, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":5, "ts":1686161974962428, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974962522, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":5, "ts":1686161974962646, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974963892, "dur":2846, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":5, "ts":1686161974966815, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets2.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1686161974966899, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974966908, "dur":1399, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets2.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1686161974968384, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1686161974968470, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974968477, "dur":6403, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1686161974974952, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":5, "ts":1686161974975029, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974975036, "dur":1947, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":5, "ts":1686161974977051, "dur":146, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level4.resS" }}
+,{ "pid":12345, "tid":5, "ts":1686161974977205, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974977213, "dur":2720, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level4.resS" }}
+,{ "pid":12345, "tid":5, "ts":1686161974980276, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level3.resS" }}
+,{ "pid":12345, "tid":5, "ts":1686161974980363, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974980373, "dur":1266, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level3.resS" }}
+,{ "pid":12345, "tid":5, "ts":1686161974981696, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level1.resS" }}
+,{ "pid":12345, "tid":5, "ts":1686161974981761, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974981767, "dur":1344, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level1.resS" }}
+,{ "pid":12345, "tid":5, "ts":1686161974983166, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1686161974983229, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1686161974983235, "dur":4635, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1686161974987929, "dur":4922, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974932869, "dur":1277, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974934146, "dur":20373, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974954525, "dur":1086, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":6, "ts":1686161974955612, "dur":122, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974955736, "dur":125, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974955861, "dur":113, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974955976, "dur":137, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974956113, "dur":119, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974956234, "dur":122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974956356, "dur":127, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974956484, "dur":144, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974956628, "dur":130, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974956760, "dur":143, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974956903, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974957016, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974957144, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974957232, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974957324, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974957400, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974957487, "dur":244, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974957732, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974957831, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974957929, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974958022, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974958114, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974958216, "dur":215, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974958433, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974958531, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974958620, "dur":446, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974959067, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974959153, "dur":236, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974959389, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974959474, "dur":226, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974959701, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974959789, "dur":235, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974960025, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974960124, "dur":227, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974960351, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974960450, "dur":951, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974961402, "dur":96, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974961499, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974961592, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974961673, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":6, "ts":1686161974961766, "dur":1239, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974963007, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets3.assets.resS" }}
+,{ "pid":12345, "tid":6, "ts":1686161974963102, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1686161974991966, "dur":836, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets3.assets.resS" }}
+,{ "pid":12345, "tid":6, "ts":1686161974992838, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":6, "ts":1686161974992840, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974932978, "dur":1183, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974934161, "dur":20518, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974954680, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1686161974954817, "dur":119, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974954938, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":7, "ts":1686161974955067, "dur":109, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974955178, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":7, "ts":1686161974955311, "dur":112, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974955425, "dur":741, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":7, "ts":1686161974956167, "dur":114, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974956283, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974956435, "dur":117, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974956553, "dur":117, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974956671, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974956764, "dur":131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974956896, "dur":117, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974957015, "dur":163, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974957178, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974957271, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974957391, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974957486, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974957580, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974957657, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974957747, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974957841, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974957950, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974958040, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974958127, "dur":195, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974958324, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974958417, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974958504, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974958595, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974958683, "dur":248, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974958932, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974959025, "dur":255, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974959281, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974959372, "dur":240, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974959612, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974959702, "dur":1170, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974960872, "dur":101, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974960975, "dur":308, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974961283, "dur":116, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974961400, "dur":111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974961511, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974961605, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974961700, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974961799, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974961900, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974961991, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Photon3Unity3D.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974962094, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974962180, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974962270, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974962361, "dur":398, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974962769, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974964050, "dur":2537, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":7, "ts":1686161974966671, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets3.assets" }}
+,{ "pid":12345, "tid":7, "ts":1686161974966758, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974966769, "dur":1391, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets3.assets" }}
+,{ "pid":12345, "tid":7, "ts":1686161974968233, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":7, "ts":1686161974968341, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974968351, "dur":1976, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":7, "ts":1686161974970415, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":7, "ts":1686161974970501, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974970515, "dur":1211, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":7, "ts":1686161974971801, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":7, "ts":1686161974971942, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974971957, "dur":3194, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":7, "ts":1686161974975216, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":7, "ts":1686161974975404, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974975470, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":7, "ts":1686161974975541, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974975573, "dur":5711, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":7, "ts":1686161974981344, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level2.resS" }}
+,{ "pid":12345, "tid":7, "ts":1686161974981424, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974981431, "dur":1583, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level2.resS" }}
+,{ "pid":12345, "tid":7, "ts":1686161974983071, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level0" }}
+,{ "pid":12345, "tid":7, "ts":1686161974983127, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974983133, "dur":1440, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/level0" }}
+,{ "pid":12345, "tid":7, "ts":1686161974984686, "dur":546, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/boot.config" }}
+,{ "pid":12345, "tid":7, "ts":1686161974985232, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1686161974985310, "dur":7556, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974933072, "dur":1099, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974934172, "dur":20360, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974954533, "dur":208, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1686161974954742, "dur":112, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974954857, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":8, "ts":1686161974955011, "dur":384, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974955397, "dur":1544, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar.exe" }}
+,{ "pid":12345, "tid":8, "ts":1686161974956942, "dur":129, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974957073, "dur":304, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974957378, "dur":356, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974957735, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974957842, "dur":104, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974957947, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974958054, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974958141, "dur":204, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974958345, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974958457, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974958543, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974958639, "dur":844, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974959483, "dur":104, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974959589, "dur":233, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974959822, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974959913, "dur":233, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974960147, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974960239, "dur":254, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974960493, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974960584, "dur":713, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974961297, "dur":110, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974961408, "dur":111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974961519, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974961611, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974961709, "dur":100, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974961810, "dur":348, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/PhotonUnityNetworking.Utilities.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974962159, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974962254, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974962356, "dur":112, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974962470, "dur":27023, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974989518, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1686161974989631, "dur":819, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Vince/Downloads/CyBar Final Build/CyBar_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":8, "ts":1686161974990485, "dur":2398, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1686161974997414, "dur":1407, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1686161975014521, "dur": 545, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1686161975014381, "dur": 704, "ph": "X", "name": "Write chrome-trace events", "args": {} },

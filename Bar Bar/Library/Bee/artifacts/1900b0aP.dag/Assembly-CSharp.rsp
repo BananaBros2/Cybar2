@@ -363,6 +363,7 @@
 "Assets/Scripts/RoomCreatorScript.cs"
 "Assets/Scripts/Seat_Library.cs"
 "Assets/Scripts/ServerConnectionScript.cs"
+"Assets/Scripts/SettingsMenu.cs"
 "Assets/Scripts/SpillScript.cs"
 "Assets/Scripts/SupplyBox.cs"
 "Assets/Scripts/TableOrder.cs"
@@ -370,9 +371,8 @@
 "Assets/Scripts/Timer.cs"
 "Assets/Scripts/Trash.cs"
 "Assets/Scripts/TriggerEnter.cs"
+"Assets/Scripts/Unpause.cs"
 "Assets/Scripts/WindUpPath.cs"
-"Assets/SettingsMenu.cs"
-"Assets/Unpause.cs"
 -langversion:9.0
 
 /deterministic
