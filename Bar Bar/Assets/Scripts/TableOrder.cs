@@ -61,6 +61,7 @@ public class TableOrder : MonoBehaviour
                 GameObject.Find("Seats").GetComponent<AvailiableSeats>().allTables.Add(gameObject);
 
                 GameObject.Find("StatsObject").GetComponent<GameStats>().levelScore -= 10;
+                GameObject.Find("StatsObject").GetComponent<GameStats>().missed += 1;
 
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = drinkImages[0];
                 transform.GetChild(1).GetChild(1).GetComponent<Image>().enabled = false;
@@ -90,6 +91,7 @@ public class TableOrder : MonoBehaviour
             GameObject.Find("Seats").GetComponent<AvailiableSeats>().allTables.Add(gameObject);
 
             GameObject.Find("StatsObject").GetComponent<GameStats>().levelScore += 30;
+            GameObject.Find("StatsObject").GetComponent<GameStats>().served += 1;
 
             transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = drinkImages[0];
             transform.GetChild(1).GetChild(1).GetComponent<Image>().enabled = false;

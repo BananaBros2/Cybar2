@@ -133,7 +133,9 @@ public class Computer : MonoBehaviour
                                     transform.GetChild(1).GetChild(i + 1).GetChild(0).GetComponent<Image>().enabled = false;
                                     currentOrder[i] = false;
                                     GameObject.Find("StatsObject").GetComponent<GameStats>().levelScore -= 30;
-                                    if (instantiatedObject.GetComponent<ContainerData>().contents == "Glass") { GameObject.Find("StatsObject").GetComponent<GameStats>().levelScore -= 20; }
+                                    GameObject.Find("StatsObject").GetComponent<GameStats>().spent += 30;
+
+                                    if (instantiatedObject.GetComponent<ContainerData>().contents == "Glass") { GameObject.Find("StatsObject").GetComponent<GameStats>().levelScore -= 20; GameObject.Find("StatsObject").GetComponent<GameStats>().spent += 20; }
                                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().checkedItems.Add(instantiatedObject.transform);
                                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().worldItems = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().checkedItems.ToArray();
                                     total -= 1;

@@ -372,6 +372,7 @@
 "Assets/Scripts/TriggerEnter.cs"
 "Assets/Scripts/WindUpPath.cs"
 "Assets/SettingsMenu.cs"
+"Assets/Unpause.cs"
 -langversion:9.0
 
 /deterministic

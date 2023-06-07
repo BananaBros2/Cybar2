@@ -13,6 +13,11 @@ public class Timer : MonoBehaviour
     public Light light;
 
     public GameObject roomLights;
+
+    public GameObject endScreen;
+    public GameObject statsObject;
+    public GameObject pauseMenu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +31,8 @@ public class Timer : MonoBehaviour
 
         gameTime += Time.deltaTime;
 
-        if (gameTime > 240) { textString.text = "END"; }
+        if (gameTime > 260) { textString.text = "FINISH"; endScreen.SetActive(true); statsObject.GetComponent<GameStats>().gameEnded = true; Destroy(pauseMenu);  }
+        else if (gameTime > 230) { textString.text = ($"END IN { Mathf.Round(260 - gameTime)}"); }
         else if (gameTime > 220) { textString.text = "1AM"; }
         else if (gameTime > 200) { textString.text = "12AM"; }
         else if (gameTime > 180) { textString.text = "11PM"; }
